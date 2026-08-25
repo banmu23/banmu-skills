@@ -1,0 +1,14 @@
+{
+  "name": "feishu-doc-beautifier",
+  "displayName": "飞书文档美化",
+  "version": "1.0.0",
+  "releasedAt": "2026-08-25",
+  "marketplace": "banmu-skills",
+  "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+  "skillRepository": "https://github.com/banmu23/feishu-doc-beautifier",
+  "releaseNotes": [
+    "加入半目 Skill 市场插件结构",
+    "新增每个新会话首次使用时的版本检查规则",
+    "保留原 GitHub Skill 与 ZIP 一键上传方式"
+  ]
+}
