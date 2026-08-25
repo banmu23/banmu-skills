@@ -1,0 +1,28 @@
+{
+  "name": "feishu-doc-beautifier",
+  "version": "1.0.0",
+  "description": "把文章、附件和已有飞书文档整理成结构清晰、保留原图、可直接交付的飞书云文档。",
+  "author": {
+    "name": "半目",
+    "url": "https://github.com/banmu23"
+  },
+  "homepage": "https://github.com/banmu23/feishu-doc-beautifier",
+  "repository": "https://github.com/banmu23/feishu-doc-beautifier",
+  "keywords": ["feishu", "lark", "document", "beautifier", "knowledge-base"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "飞书文档美化",
+    "shortDescription": "把文章和附件变成可直接交付的飞书云文档",
+    "longDescription": "自动判断文档用途、重构层级与阅读路径、保留有用原图，并在具备飞书权限时创建真实的美化版飞书云文档。",
+    "developerName": "半目",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/banmu23/feishu-doc-beautifier",
+    "defaultPrompt": [
+      "把这篇文章生成一篇新的飞书云文档，保留原图",
+      "美化这个飞书文档链接，默认不要覆盖原文",
+      "把这份附件整理成适合客户阅读的飞书文档"
+    ],
+    "brandColor": "#FF8A3D"
+  }
+}
