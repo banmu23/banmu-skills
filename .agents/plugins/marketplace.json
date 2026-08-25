@@ -1,0 +1,20 @@
+{
+  "name": "banmu-skills",
+  "interface": {
+    "displayName": "半目 Skill 市场"
+  },
+  "plugins": [
+    {
+      "name": "feishu-doc-beautifier",
+      "source": {
+        "source": "local",
+        "path": "./plugins/feishu-doc-beautifier"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
