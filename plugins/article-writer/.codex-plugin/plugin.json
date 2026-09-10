@@ -1,0 +1,34 @@
+{
+  "name": "article-writer",
+  "version": "2.1.0",
+  "description": "基于真实素材生成公众号文章、星球实操贴和可执行长文。",
+  "author": {
+    "name": "半目",
+    "url": "https://github.com/banmu23"
+  },
+  "homepage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/article-writer",
+  "repository": "https://github.com/banmu23/banmu-skills",
+  "keywords": [
+    "banmu",
+    "agent-skill",
+    "article-writer"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "文章一键成稿",
+    "shortDescription": "把真实素材写成完整长文",
+    "longDescription": "基于真实素材生成公众号文章、星球实操贴和可执行长文。",
+    "developerName": "半目",
+    "category": "Content & Communication",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/banmu23/banmu-skills/tree/main/plugins/article-writer",
+    "defaultPrompt": [
+      "把这些素材写成一篇公众号文章",
+      "把这个案例整理成星球实操贴"
+    ],
+    "brandColor": "#FF8A3D"
+  }
+}
