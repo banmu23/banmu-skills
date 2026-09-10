@@ -1,14 +1,18 @@
 {
   "name": "feishu-doc-beautifier",
   "displayName": "飞书文档美化",
-  "version": "1.0.0",
-  "releasedAt": "2026-08-25",
+  "version": "1.2.0",
+  "releasedAt": "2026-09-10",
   "marketplace": "banmu-skills",
   "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
-  "skillRepository": "https://github.com/banmu23/feishu-doc-beautifier",
+  "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-doc-beautifier",
+  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-doc-beautifier/1.2.0/feishu-doc-beautifier.zip",
+  "sha256": "b6e1d212a90cc241568c2c65f3b96ea02e3eaa780f9d41e72a549193ccc0ec63",
+  "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
   "releaseNotes": [
-    "加入半目 Skill 市场插件结构",
-    "新增每个新会话首次使用时的版本检查规则",
-    "保留原 GitHub Skill 与 ZIP 一键上传方式"
+    "标题层级改为内容驱动，长文通常收束为 3-7 个并列一级模块",
+    "客户和学员实操文档新增最小必要负担规则",
+    "修改已有文档时以在线最新版为准，保留人工修改并保持原目录",
+    "新增企业培训审核稿与课前准备指引的差异化写作路由"
   ]
 }

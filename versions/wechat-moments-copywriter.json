@@ -1,0 +1,17 @@
+{
+  "name": "wechat-moments-copywriter",
+  "displayName": "高质量朋友圈一键生成",
+  "version": "2.0.0",
+  "releasedAt": "2026-09-10",
+  "marketplace": "banmu-skills",
+  "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+  "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/wechat-moments-copywriter",
+  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-moments-copywriter/2.0.0/wechat-moments-copywriter.zip",
+  "sha256": "5faec38a758fe9af079e1ad95f66e8ad3ea9221d0d04f66706a29f25353d11bc",
+  "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+  "releaseNotes": [
+    "同步维护源当前最新版",
+    "生成客户安全版一键上传包",
+    "加入首次使用版本检查与确认更新机制"
+  ]
+}

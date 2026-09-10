@@ -1,0 +1,17 @@
+{
+  "name": "feishu-kb-product-builder",
+  "displayName": "飞书知识库产品一键生成",
+  "version": "1.1.0",
+  "releasedAt": "2026-09-10",
+  "marketplace": "banmu-skills",
+  "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+  "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-kb-product-builder",
+  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-kb-product-builder/1.1.0/feishu-kb-product-builder.zip",
+  "sha256": "ea80716bfd9450e7b89802e52904b6463e32157e98b8390f5e1271fc9086c052",
+  "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+  "releaseNotes": [
+    "知识库正文同步内容驱动的二至三级标题层级规则",
+    "新增 3-7 个并列一级模块、自动编号和低负担实操标准",
+    "已有飞书文档更新时保护在线人工修改与原目录"
+  ]
+}

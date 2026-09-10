@@ -1,0 +1,17 @@
+{
+  "name": "personal-manual-interviewer",
+  "displayName": "个人说明书访谈生成器",
+  "version": "1.0.0",
+  "releasedAt": "2026-09-10",
+  "marketplace": "banmu-skills",
+  "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+  "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/personal-manual-interviewer",
+  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/personal-manual-interviewer/1.0.0/personal-manual-interviewer.zip",
+  "sha256": "d623c6d44392f9c7efe8d18673d21fdd71b9156420c1f1bcd3d857dc756704ee",
+  "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+  "releaseNotes": [
+    "同步维护源当前最新版",
+    "生成客户安全版一键上传包",
+    "加入首次使用版本检查与确认更新机制"
+  ]
+}

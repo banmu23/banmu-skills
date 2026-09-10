@@ -1,0 +1,17 @@
+{
+  "name": "banmu-deep-consultation-planner",
+  "displayName": "深度咨询方案一键生成",
+  "version": "1.0.0",
+  "releasedAt": "2026-09-10",
+  "marketplace": "banmu-skills",
+  "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+  "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/banmu-deep-consultation-planner",
+  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/banmu-deep-consultation-planner/1.0.0/banmu-deep-consultation-planner.zip",
+  "sha256": "4ea7d24b03f75943f59003bbdff2ecf808c88aa823b82b75b3425f0ea2097c0a",
+  "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+  "releaseNotes": [
+    "同步维护源当前最新版",
+    "生成客户安全版一键上传包",
+    "加入首次使用版本检查与确认更新机制"
+  ]
+}

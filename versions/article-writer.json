@@ -1,0 +1,17 @@
+{
+  "name": "article-writer",
+  "displayName": "文章一键成稿",
+  "version": "2.1.0",
+  "releasedAt": "2026-09-10",
+  "marketplace": "banmu-skills",
+  "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+  "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/article-writer",
+  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/article-writer/2.1.0/article-writer.zip",
+  "sha256": "4565c12168ca015653b8ba1036145db6d489cdcc115735ee196743516cfaa521",
+  "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+  "releaseNotes": [
+    "同步最新版飞书文档美化内置流程",
+    "飞书长文新增标题层级、自动编号与客户负担验收",
+    "已有飞书来源文档改用在线最新版并保护人工修改"
+  ]
+}

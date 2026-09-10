@@ -1,0 +1,17 @@
+{
+  "name": "talking-head-scriptwriter",
+  "displayName": "口播逐字稿一键生成",
+  "version": "1.0.0",
+  "releasedAt": "2026-09-10",
+  "marketplace": "banmu-skills",
+  "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+  "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/talking-head-scriptwriter",
+  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/talking-head-scriptwriter/1.0.0/talking-head-scriptwriter.zip",
+  "sha256": "9d8c1f23526e654f9979f703c7bd2ca2dec0b1dd6c5831fbabfa4b6c280e8886",
+  "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+  "releaseNotes": [
+    "同步维护源当前最新版",
+    "生成客户安全版一键上传包",
+    "加入首次使用版本检查与确认更新机制"
+  ]
+}
