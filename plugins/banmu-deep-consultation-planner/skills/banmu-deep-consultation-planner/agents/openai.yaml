@@ -1,0 +1,7 @@
+interface:
+  display_name: "深度咨询方案一键生成"
+  short_description: "从客户资料生成可直接交付的咨询方案"
+  default_prompt: "Use $banmu-deep-consultation-planner to 根据这些客户资料生成一份深度咨询方案"
+
+policy:
+  allow_implicit_invocation: true
