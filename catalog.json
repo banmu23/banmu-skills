@@ -1,0 +1,160 @@
+{
+  "marketplace": "banmu-skills",
+  "releasedAt": "2026-09-10",
+  "skills": [
+    {
+      "name": "feishu-doc-beautifier",
+      "displayName": "飞书文档美化",
+      "version": "1.2.0",
+      "releasedAt": "2026-09-10",
+      "marketplace": "banmu-skills",
+      "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+      "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-doc-beautifier",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-doc-beautifier/1.2.0/feishu-doc-beautifier.zip",
+      "sha256": "b6e1d212a90cc241568c2c65f3b96ea02e3eaa780f9d41e72a549193ccc0ec63",
+      "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+      "releaseNotes": [
+        "标题层级改为内容驱动，长文通常收束为 3-7 个并列一级模块",
+        "客户和学员实操文档新增最小必要负担规则",
+        "修改已有文档时以在线最新版为准，保留人工修改并保持原目录",
+        "新增企业培训审核稿与课前准备指引的差异化写作路由"
+      ]
+    },
+    {
+      "name": "personal-manual-interviewer",
+      "displayName": "个人说明书访谈生成器",
+      "version": "1.0.0",
+      "releasedAt": "2026-09-10",
+      "marketplace": "banmu-skills",
+      "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+      "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/personal-manual-interviewer",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/personal-manual-interviewer/1.0.0/personal-manual-interviewer.zip",
+      "sha256": "d623c6d44392f9c7efe8d18673d21fdd71b9156420c1f1bcd3d857dc756704ee",
+      "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+      "releaseNotes": [
+        "同步维护源当前最新版",
+        "生成客户安全版一键上传包",
+        "加入首次使用版本检查与确认更新机制"
+      ]
+    },
+    {
+      "name": "feishu-kb-product-builder",
+      "displayName": "飞书知识库产品一键生成",
+      "version": "1.1.0",
+      "releasedAt": "2026-09-10",
+      "marketplace": "banmu-skills",
+      "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+      "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-kb-product-builder",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-kb-product-builder/1.1.0/feishu-kb-product-builder.zip",
+      "sha256": "ea80716bfd9450e7b89802e52904b6463e32157e98b8390f5e1271fc9086c052",
+      "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+      "releaseNotes": [
+        "知识库正文同步内容驱动的二至三级标题层级规则",
+        "新增 3-7 个并列一级模块、自动编号和低负担实操标准",
+        "已有飞书文档更新时保护在线人工修改与原目录"
+      ]
+    },
+    {
+      "name": "wechat-xhs-image-note-maker",
+      "displayName": "公众号贴图与小红书图文一键成稿",
+      "version": "1.0.0",
+      "releasedAt": "2026-09-10",
+      "marketplace": "banmu-skills",
+      "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+      "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/wechat-xhs-image-note-maker",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-xhs-image-note-maker/1.0.0/wechat-xhs-image-note-maker.zip",
+      "sha256": "cbf15384cd066988a420f650f1bc25517aeb9987ccb0ce93edcbae136b934452",
+      "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+      "releaseNotes": [
+        "同步维护源当前最新版",
+        "生成客户安全版一键上传包",
+        "加入首次使用版本检查与确认更新机制"
+      ]
+    },
+    {
+      "name": "article-writer",
+      "displayName": "文章一键成稿",
+      "version": "2.1.0",
+      "releasedAt": "2026-09-10",
+      "marketplace": "banmu-skills",
+      "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+      "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/article-writer",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/article-writer/2.1.0/article-writer.zip",
+      "sha256": "4565c12168ca015653b8ba1036145db6d489cdcc115735ee196743516cfaa521",
+      "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+      "releaseNotes": [
+        "同步最新版飞书文档美化内置流程",
+        "飞书长文新增标题层级、自动编号与客户负担验收",
+        "已有飞书来源文档改用在线最新版并保护人工修改"
+      ]
+    },
+    {
+      "name": "wechat-draft-magazine-builder",
+      "displayName": "公众号文章一键排版到草稿箱",
+      "version": "2.0.0",
+      "releasedAt": "2026-09-10",
+      "marketplace": "banmu-skills",
+      "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+      "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/wechat-draft-magazine-builder",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-draft-magazine-builder/2.0.0/wechat-draft-magazine-builder.zip",
+      "sha256": "cbe4bcc04656d25f149399843f4869626f1f5d7554c91b616bb2dc7ea60dd676",
+      "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+      "releaseNotes": [
+        "同步维护源当前最新版",
+        "生成客户安全版一键上传包",
+        "加入首次使用版本检查与确认更新机制"
+      ]
+    },
+    {
+      "name": "talking-head-scriptwriter",
+      "displayName": "口播逐字稿一键生成",
+      "version": "1.0.0",
+      "releasedAt": "2026-09-10",
+      "marketplace": "banmu-skills",
+      "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+      "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/talking-head-scriptwriter",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/talking-head-scriptwriter/1.0.0/talking-head-scriptwriter.zip",
+      "sha256": "9d8c1f23526e654f9979f703c7bd2ca2dec0b1dd6c5831fbabfa4b6c280e8886",
+      "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+      "releaseNotes": [
+        "同步维护源当前最新版",
+        "生成客户安全版一键上传包",
+        "加入首次使用版本检查与确认更新机制"
+      ]
+    },
+    {
+      "name": "wechat-moments-copywriter",
+      "displayName": "高质量朋友圈一键生成",
+      "version": "2.0.0",
+      "releasedAt": "2026-09-10",
+      "marketplace": "banmu-skills",
+      "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+      "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/wechat-moments-copywriter",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-moments-copywriter/2.0.0/wechat-moments-copywriter.zip",
+      "sha256": "5faec38a758fe9af079e1ad95f66e8ad3ea9221d0d04f66706a29f25353d11bc",
+      "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+      "releaseNotes": [
+        "同步维护源当前最新版",
+        "生成客户安全版一键上传包",
+        "加入首次使用版本检查与确认更新机制"
+      ]
+    },
+    {
+      "name": "banmu-deep-consultation-planner",
+      "displayName": "深度咨询方案一键生成",
+      "version": "1.0.0",
+      "releasedAt": "2026-09-10",
+      "marketplace": "banmu-skills",
+      "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+      "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/banmu-deep-consultation-planner",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/banmu-deep-consultation-planner/1.0.0/banmu-deep-consultation-planner.zip",
+      "sha256": "4ea7d24b03f75943f59003bbdff2ecf808c88aa823b82b75b3425f0ea2097c0a",
+      "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+      "releaseNotes": [
+        "同步维护源当前最新版",
+        "生成客户安全版一键上传包",
+        "加入首次使用版本检查与确认更新机制"
+      ]
+    }
+  ]
+}
