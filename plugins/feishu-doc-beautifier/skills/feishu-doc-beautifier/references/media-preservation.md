@@ -12,7 +12,7 @@ If relevance is uncertain, keep the image.
 
 Before rewriting or creating the beautified document from a Feishu URL/token:
 
-1. Fetch the source document with enough detail to see media and block IDs:
+1. Fetch the latest online source document with enough detail to see media and block IDs. Do not use a stale local export or earlier draft as the authoritative version:
    ```bash
    lark-cli docs +fetch --api-version v2 --doc "<doc>" --detail full
    ```
@@ -69,10 +69,12 @@ Do not dump all preserved images at the end unless the platform cannot place the
 
 When the user explicitly asks to directly modify the original document:
 
+- Re-fetch the latest online version immediately before the write and preserve human edits that appeared after any earlier read.
 - Prefer precise block operations: `block_insert_after`, `block_replace`, `block_move_after`, and narrow `str_replace`.
 - Avoid `overwrite` whenever the source contains images/media. `overwrite` can lose images, comments, and resource blocks.
 - Never `block_delete` an image/media block unless the user asked for deletion or the block is clearly disposable and you disclose it.
 - Preserve resource tags exactly when replacing nearby text: `<img>`, `<source>`, `<whiteboard>`, `<sheet>`, `<bitable>`, `<synced_reference>`, and rich `<cite>` tags.
+- Keep the document in its current folder or wiki node unless the user explicitly asks to move it.
 
 If a full rebuild is the only practical path, create a new beautified document first, migrate the media inventory, verify preservation, and only then ask the user whether to replace or archive the original.
 

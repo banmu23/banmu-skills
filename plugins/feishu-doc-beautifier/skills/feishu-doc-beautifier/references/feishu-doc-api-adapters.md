@@ -26,10 +26,11 @@ Important live-mode defaults:
 
 When the input is a Feishu URL/token:
 
-1. Fetch the original document.
-2. Inventory embedded images/media and decide where each relevant item belongs in the beautified structure.
-3. Create a new beautified version that preserves relevant original images/media.
-4. Return the new URL and summarize what changed, including image preservation.
+1. Fetch the latest online version and treat it as the authoritative baseline. Local exports, cached text, and earlier drafts are secondary references only.
+2. Record the current folder or wiki-node location so the document is not moved accidentally.
+3. Inventory embedded images/media and decide where each relevant item belongs in the beautified structure.
+4. Create a new beautified version that preserves relevant original images/media.
+5. Return the new URL and summarize what changed, including image preservation.
 
 Only update the original if the user says things like:
 
@@ -37,6 +38,8 @@ Only update the original if the user says things like:
 - "就在原文档里美化"
 - "覆盖原文"
 - "不用新建，直接更新这个链接"
+
+Before an authorized in-place update, re-fetch the online document immediately before writing. Preserve any newer human edits, prefer precise block operations or narrow replacements, and keep the document in its existing folder/wiki node unless the user explicitly requests a move.
 
 ## Embedded Image And Media Rule
 

@@ -7,6 +7,8 @@ Choose the document style from the content type and reader goal. Do not force ev
 | Content type | Reader goal | Style | Recommended blocks |
 |-|-|-|-|
 | Course material | Learn and follow steps | Teaching notes | callout, numbered sections, checklist, table, diagram |
+| Training review draft | Review and approve scope | Review document | scope table, agenda hierarchy, decision callout, revision comparison |
+| Training preparation guide | Complete only necessary setup | Low-burden setup guide | minimal checklist, real screenshots, optional-path callout, acceptance check |
 | Delivery proposal | Decide whether to approve or buy | Executive proposal | opening conclusion, problem/solution grid, scope table, next-step checklist |
 | SOP | Execute without confusion | Operational manual | checklist, step table, decision tree, risk callout |
 | Meeting notes | Review decisions and actions | Decision record | summary callout, table for decisions, checkbox action list, timeline |
@@ -22,6 +24,19 @@ Choose the document style from the content type and reader goal. Do not force ev
 - Start with what the learner can do after reading.
 - Use steps and examples.
 - Add a final practice checklist.
+
+### Training Review Document
+
+- Keep the confirmed title, order, duration, scope, and commitments unchanged unless the user asks to revise them.
+- Show the detailed agenda, teaching focus, boundaries, and decisions the reviewer actually needs; keep full prompts, internal troubleshooting, and test progress in preparation materials.
+- When comparing revisions, distinguish the first-version baseline, explicit customer feedback, later stakeholder suggestions, and new trainer design. Do not present the agent's own ideas as customer requirements.
+
+### Low-Burden Training Preparation Guide
+
+- Include only the software, authorization, materials, and checks truly required for this event's first successful run.
+- Reuse the guidance style of a prior event without copying its time, location, price, assignments, or tool list.
+- Prefer current real screenshots near the matching step. If the screenshot shows an older interface, state which old-interface controls the reader should ignore.
+- If format conversion or transfer reduces clarity, use the original source image and validate the rendered Feishu page rather than trusting upload success.
 
 ### Executive Proposal
 

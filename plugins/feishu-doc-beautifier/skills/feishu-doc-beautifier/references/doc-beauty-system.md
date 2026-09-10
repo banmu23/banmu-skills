@@ -21,6 +21,11 @@ Every polished document should normally include:
 - A conclusion-first opening callout
 - A short "how to read this document" or key-summary section when the document is long
 - 3-7 main sections
+- A content-driven heading hierarchy: use level 1 for main stages, level 2 for parallel subtopics, and level 3 only for genuinely distinct steps, methods, or questions within a subtopic
+- Same-level headings that are logically parallel; do not place a stage, action, result, and warning side by side as if they play the same role
+- No long document flattened into only level-1 headings; no forced second or third level when the content is too short or simple
+- For longer courses, guides, SOPs, proposals, and delivery documents, usually 3-7 level-1 modules before content-driven level-2 or level-3 expansion
+- When Feishu automatic heading numbering is enabled, use it for the `1 / 1.1 / 1.1.1` sequence and do not duplicate those numbers in heading text
 - At least one non-text block in every major section
 - A final action list, decision list, or next-step summary when applicable
 
@@ -60,6 +65,9 @@ Before final output, check:
 - Every major section has a non-text block.
 - Important process or comparison content is diagrammed or tabulated.
 - Relevant original images/media are preserved and placed near the content they support.
+- Heading levels reflect real parent-child relationships; substantial documents are not a flat list of level-1 headings, and short documents are not over-structured.
+- Customer-facing tasks and checks keep only the minimum necessary actions and avoid burden-heavy wording when a lighter first version is sufficient.
+- Practical customer or learner documents clearly separate required first-version actions from optional upgrades; use low-pressure alternatives such as “第一版先完成这些就够了” or “任选一种方法即可” when they are true.
 - The final document can be scanned in 30 seconds.
 
 ## Image Clarity Gate
