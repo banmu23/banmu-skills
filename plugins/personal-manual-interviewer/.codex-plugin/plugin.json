@@ -1,0 +1,34 @@
+{
+  "name": "personal-manual-interviewer",
+  "version": "1.0.0",
+  "description": "通过轻松访谈生成可供人和 Agent 长期使用的完整个人说明书。",
+  "author": {
+    "name": "半目",
+    "url": "https://github.com/banmu23"
+  },
+  "homepage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/personal-manual-interviewer",
+  "repository": "https://github.com/banmu23/banmu-skills",
+  "keywords": [
+    "banmu",
+    "agent-skill",
+    "personal-manual-interviewer"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "个人说明书访谈生成器",
+    "shortDescription": "把碎片信息整理成完整个人说明书",
+    "longDescription": "通过轻松访谈生成可供人和 Agent 长期使用的完整个人说明书。",
+    "developerName": "半目",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/banmu23/banmu-skills/tree/main/plugins/personal-manual-interviewer",
+    "defaultPrompt": [
+      "请通过访谈帮我生成个人说明书",
+      "把这些个人资料整理成可上传给 Agent 的说明书"
+    ],
+    "brandColor": "#FF8A3D"
+  }
+}
