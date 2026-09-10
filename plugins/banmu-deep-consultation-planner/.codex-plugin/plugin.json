@@ -1,0 +1,34 @@
+{
+  "name": "banmu-deep-consultation-planner",
+  "version": "1.0.0",
+  "description": "基于客户真实资料生成完整、精准、可执行的深度咨询方案。",
+  "author": {
+    "name": "半目",
+    "url": "https://github.com/banmu23"
+  },
+  "homepage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/banmu-deep-consultation-planner",
+  "repository": "https://github.com/banmu23/banmu-skills",
+  "keywords": [
+    "banmu",
+    "agent-skill",
+    "banmu-deep-consultation-planner"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "深度咨询方案一键生成",
+    "shortDescription": "从客户资料生成可直接交付的咨询方案",
+    "longDescription": "基于客户真实资料生成完整、精准、可执行的深度咨询方案。",
+    "developerName": "半目",
+    "category": "Business",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/banmu23/banmu-skills/tree/main/plugins/banmu-deep-consultation-planner",
+    "defaultPrompt": [
+      "根据这些客户资料生成一份深度咨询方案",
+      "把访谈记录整理成客户可执行的落地方案"
+    ],
+    "brandColor": "#FF8A3D"
+  }
+}
