@@ -1,0 +1,7 @@
+interface:
+  display_name: "个人说明书访谈生成器"
+  short_description: "把碎片信息整理成完整个人说明书"
+  default_prompt: "Use $personal-manual-interviewer to 请通过访谈帮我生成个人说明书"
+
+policy:
+  allow_implicit_invocation: true
