@@ -1,0 +1,34 @@
+{
+  "name": "wechat-xhs-image-note-maker",
+  "version": "1.0.0",
+  "description": "从主题或真实素材生成公众号贴图和小红书图文笔记整套交付。",
+  "author": {
+    "name": "半目",
+    "url": "https://github.com/banmu23"
+  },
+  "homepage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/wechat-xhs-image-note-maker",
+  "repository": "https://github.com/banmu23/banmu-skills",
+  "keywords": [
+    "banmu",
+    "agent-skill",
+    "wechat-xhs-image-note-maker"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "公众号贴图与小红书图文一键成稿",
+    "shortDescription": "生成可发布的公众号贴图和小红书图文",
+    "longDescription": "从主题或真实素材生成公众号贴图和小红书图文笔记整套交付。",
+    "developerName": "半目",
+    "category": "Content & Communication",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/banmu23/banmu-skills/tree/main/plugins/wechat-xhs-image-note-maker",
+    "defaultPrompt": [
+      "把这个主题做成小红书图文笔记",
+      "生成一套公众号贴图和配套文案"
+    ],
+    "brandColor": "#FF8A3D"
+  }
+}
