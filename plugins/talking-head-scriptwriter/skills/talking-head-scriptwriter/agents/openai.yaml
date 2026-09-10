@@ -1,0 +1,7 @@
+interface:
+  display_name: "口播逐字稿一键生成"
+  short_description: "生成可直接录制的中文口播逐字稿"
+  default_prompt: "Use $talking-head-scriptwriter to 把这个主题写成一条口播逐字稿"
+
+policy:
+  allow_implicit_invocation: true
