@@ -1,0 +1,7 @@
+interface:
+  display_name: "飞书知识库产品一键生成"
+  short_description: "把课程资料做成可交付的飞书知识库"
+  default_prompt: "Use $feishu-kb-product-builder to 把这些课程资料做成飞书知识库产品"
+
+policy:
+  allow_implicit_invocation: true
