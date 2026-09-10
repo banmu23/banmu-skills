@@ -1,0 +1,34 @@
+{
+  "name": "feishu-kb-product-builder",
+  "version": "1.1.0",
+  "description": "从课程、文档、图片和知识资料构建可销售、可交付的飞书知识库产品。",
+  "author": {
+    "name": "半目",
+    "url": "https://github.com/banmu23"
+  },
+  "homepage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-kb-product-builder",
+  "repository": "https://github.com/banmu23/banmu-skills",
+  "keywords": [
+    "banmu",
+    "agent-skill",
+    "feishu-kb-product-builder"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "飞书知识库产品一键生成",
+    "shortDescription": "把课程资料做成可交付的飞书知识库",
+    "longDescription": "从课程、文档、图片和知识资料构建可销售、可交付的飞书知识库产品。",
+    "developerName": "半目",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-kb-product-builder",
+    "defaultPrompt": [
+      "把这些课程资料做成飞书知识库产品",
+      "重构并美化这个飞书知识库"
+    ],
+    "brandColor": "#FF8A3D"
+  }
+}
