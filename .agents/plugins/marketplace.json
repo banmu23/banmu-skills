@@ -15,6 +15,102 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "personal-manual-interviewer",
+      "source": {
+        "source": "local",
+        "path": "./plugins/personal-manual-interviewer"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "feishu-kb-product-builder",
+      "source": {
+        "source": "local",
+        "path": "./plugins/feishu-kb-product-builder"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "wechat-xhs-image-note-maker",
+      "source": {
+        "source": "local",
+        "path": "./plugins/wechat-xhs-image-note-maker"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Content & Communication"
+    },
+    {
+      "name": "article-writer",
+      "source": {
+        "source": "local",
+        "path": "./plugins/article-writer"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Content & Communication"
+    },
+    {
+      "name": "wechat-draft-magazine-builder",
+      "source": {
+        "source": "local",
+        "path": "./plugins/wechat-draft-magazine-builder"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Content & Communication"
+    },
+    {
+      "name": "talking-head-scriptwriter",
+      "source": {
+        "source": "local",
+        "path": "./plugins/talking-head-scriptwriter"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Content & Communication"
+    },
+    {
+      "name": "wechat-moments-copywriter",
+      "source": {
+        "source": "local",
+        "path": "./plugins/wechat-moments-copywriter"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Content & Communication"
+    },
+    {
+      "name": "banmu-deep-consultation-planner",
+      "source": {
+        "source": "local",
+        "path": "./plugins/banmu-deep-consultation-planner"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Business"
     }
   ]
 }
