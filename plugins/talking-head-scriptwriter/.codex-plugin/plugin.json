@@ -1,0 +1,34 @@
+{
+  "name": "talking-head-scriptwriter",
+  "version": "1.0.0",
+  "description": "从主题、知识库、真实素材或对标稿生成可直接录制的中文口播逐字稿。",
+  "author": {
+    "name": "半目",
+    "url": "https://github.com/banmu23"
+  },
+  "homepage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/talking-head-scriptwriter",
+  "repository": "https://github.com/banmu23/banmu-skills",
+  "keywords": [
+    "banmu",
+    "agent-skill",
+    "talking-head-scriptwriter"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "口播逐字稿一键生成",
+    "shortDescription": "生成可直接录制的中文口播逐字稿",
+    "longDescription": "从主题、知识库、真实素材或对标稿生成可直接录制的中文口播逐字稿。",
+    "developerName": "半目",
+    "category": "Content & Communication",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/banmu23/banmu-skills/tree/main/plugins/talking-head-scriptwriter",
+    "defaultPrompt": [
+      "把这个主题写成一条口播逐字稿",
+      "结合这些对标稿帮我生成短视频口播"
+    ],
+    "brandColor": "#FF8A3D"
+  }
+}
