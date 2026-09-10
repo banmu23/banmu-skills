@@ -1,0 +1,34 @@
+{
+  "name": "wechat-draft-magazine-builder",
+  "version": "2.0.0",
+  "description": "把终稿、飞书文档或 Markdown 排成高质量公众号版式并写入草稿箱。",
+  "author": {
+    "name": "半目",
+    "url": "https://github.com/banmu23"
+  },
+  "homepage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/wechat-draft-magazine-builder",
+  "repository": "https://github.com/banmu23/banmu-skills",
+  "keywords": [
+    "banmu",
+    "agent-skill",
+    "wechat-draft-magazine-builder"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "公众号文章一键排版到草稿箱",
+    "shortDescription": "公众号排版、风控和草稿箱写入",
+    "longDescription": "把终稿、飞书文档或 Markdown 排成高质量公众号版式并写入草稿箱。",
+    "developerName": "半目",
+    "category": "Content & Communication",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/banmu23/banmu-skills/tree/main/plugins/wechat-draft-magazine-builder",
+    "defaultPrompt": [
+      "把这篇终稿排版后写入公众号草稿箱",
+      "检查这篇文章的公众号发布风险并生成排版版"
+    ],
+    "brandColor": "#FF8A3D"
+  }
+}
