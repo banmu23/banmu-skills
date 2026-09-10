@@ -1,0 +1,7 @@
+interface:
+  display_name: "文章一键成稿"
+  short_description: "把真实素材写成完整长文"
+  default_prompt: "Use $article-writer to 把这些素材写成一篇公众号文章"
+
+policy:
+  allow_implicit_invocation: true
