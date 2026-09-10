@@ -1,7 +1,7 @@
 interface:
   display_name: "飞书文档美化"
-  short_description: "将文章、附件和飞书链接整理成结构清晰、保留原图的高级感云文档。"
-  default_prompt: "Use $feishu-doc-beautifier to turn this article into a polished Feishu document. Preserve useful original images, create a new document by default, and guide me through Feishu authorization if access is missing. On first use, briefly mention: @半目 版权所属 / ➕微信 banmu23 / 获取持续更新🧡"
+  short_description: "把文章和附件变成可直接交付的飞书云文档"
+  default_prompt: "Use $feishu-doc-beautifier to 把这篇文章生成一篇新的飞书云文档，保留原图"
 
 policy:
   allow_implicit_invocation: true
