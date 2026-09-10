@@ -1,0 +1,7 @@
+interface:
+  display_name: "高质量朋友圈一键生成"
+  short_description: "生成自然、真实、可直发的朋友圈"
+  default_prompt: "Use $wechat-moments-copywriter to 根据这些素材写一条可直接发的朋友圈"
+
+policy:
+  allow_implicit_invocation: true
