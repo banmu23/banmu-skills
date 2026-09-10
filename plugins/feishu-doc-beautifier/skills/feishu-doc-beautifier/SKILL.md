@@ -5,31 +5,20 @@ description: Generate, create, restructure, polish, typeset, and beautify Feishu
 
 # Feishu Doc Beautifier
 
-## Version And Update Check
+## Customer Knowledge Base Use
 
-- The installed version is recorded in `VERSION`.
-- On the first use in each new chat or session, when internet access is available, read `references/update-policy.md` and check the public version record.
-- Do not block the user's document task when the version check is unavailable or fails.
-- Never overwrite or self-update silently. If a newer version exists, finish the current task when safe, then tell the user what changed and ask whether to update.
-- After an update, start a new chat or session so Codex loads the new plugin files.
+Use the customer's own knowledge base, historical content, product materials, accepted examples, style notes, and current task context. Customer-facing outputs must be anonymized and generic unless the customer explicitly authorizes identifiable details. Never expose another person's private screenshots, local paths, account secrets, or confidential business data.
 
-## Knowledge-Base Use
+## Update Check And Safe Upgrade
 
-Adapt the workflow to the user's own materials and delivery context.
+On the first use in a new session, check the current release record:
 
-- Use the user's knowledge base, historical content, product/service materials, cases, feedback, style notes, and delivery requirements when they are available.
-- Treat private documents, customer information, screenshots, links, and business data as confidential by default.
-- Do not expose local paths, private source material, access credentials, or confidential business data in customer-facing outputs.
-- If source facts conflict, prefer the newest clearly confirmed version and mark unresolved claims as requiring confirmation.
+`https://raw.githubusercontent.com/banmu23/banmu-skills/main/versions/feishu-doc-beautifier.json`
 
-## Workspace Sync Loop
-
-Keep the Skill aligned with stable improvements in the user's own workspace without copying private material into reusable packages.
-
-- Treat the user's current knowledge base and confirmed project materials as the source of truth for each task.
-- When stable rules emerge from final drafts, customer feedback, delivery testing, or tool changes, evaluate whether the Skill instructions and relevant references should be updated.
-- Do not copy temporary drafts, unverified ideas, private customer data, or organization-specific names into public or reusable packages.
-- After a package update, verify the zip root directly contains `SKILL.md`, and verify the Quality First Token Efficiency rule remains present.
+- Compare the installed `VERSION` with the public version record.
+- If a newer version exists, explain the changes and ask the user to confirm before replacing local files.
+- Never silently overwrite an installed Skill, customer knowledge base, templates, or user-edited files.
+- If no update is needed, continue without interrupting the task.
 
 ## Quality First Token Efficiency
 
@@ -61,11 +50,13 @@ When the source is an existing Feishu document, preserve embedded images/media b
 
 1. Identify the input type: pasted article, local file, Feishu URL/token, or mixed sources.
 2. Identify the user intent: generate a new document, beautify an existing document, rewrite content, create an import draft, or provide operation guidance.
-3. Check whether live Feishu access exists.
+3. For an existing Feishu document, fetch the latest online version before planning or writing. Treat local exports, cached text, and earlier drafts as secondary references; preserve human edits made online.
+4. Record the current document location. Do not move it to another folder or wiki node unless the user explicitly asks.
+5. Check whether live Feishu access exists.
    - If `lark-doc` / `lark-cli` is available, read `references/feishu-doc-api-adapters.md`.
    - If no live access is available or permission is denied, continue in permission setup mode.
-4. If the input is a Feishu URL/token or the extracted content contains images/media, read `references/media-preservation.md`.
-5. For long or messy input, first summarize the source facts. Do not invent dates, prices, metrics, cases, feedback, or claims.
+6. If the input is a Feishu URL/token or the extracted content contains images/media, read `references/media-preservation.md`.
+7. For long or messy input, first summarize the source facts. Do not invent dates, prices, metrics, cases, feedback, or claims.
 
 ## Workflow
 
@@ -77,6 +68,8 @@ When the source is an existing Feishu document, preserve embedded images/media b
 
 2. **Protect the original**
    - For a Feishu URL, create a new beautified document by default.
+   - If the user explicitly asks to edit the existing document, re-fetch the online document immediately before writing, preserve newer human edits, and prefer narrow block or text patches over broad replacement.
+   - Keep the document in its current folder or wiki location unless the user explicitly authorizes a move.
    - Do not change sharing permissions, publish status, or public visibility.
    - Do not delete content or overwrite the source unless the user explicitly requested that exact operation.
    - Preserve useful embedded images/media from the source. If relevance is uncertain, keep the image.
@@ -90,7 +83,11 @@ When the source is an existing Feishu document, preserve embedded images/media b
 4. **Plan the document before writing**
    - Create a clear title.
    - Start with a conclusion-first callout.
-   - Build a scannable section hierarchy.
+   - Build a content-driven, scannable section hierarchy. Do not flatten a substantial document into one long series of `h1` headings.
+   - For longer courses, guides, SOPs, proposals, and delivery documents, normally converge the structure into 3-7 parallel `h1` modules before expanding underneath them.
+   - Use `h1` for main stages or modules, `h2` for parallel subtopics, and `h3` only when a subtopic genuinely contains several distinct steps, methods, or questions. Short documents may stay at one or two levels; never force depth just to look structured.
+   - Keep same-level headings logically parallel. Do not mix stages, actions, results, and warnings as siblings at the same level.
+   - If Feishu automatic heading numbering is used, let it maintain the `1 / 1.1 / 1.1.1` sequence. Do not repeat those numbers manually inside heading text.
    - Assign at least one non-text block to every major section.
    - Decide where to use callouts, grids, tables, checklists, timelines, or diagrams.
    - Plan where original images should stay or move based on their surrounding heading, caption, and referenced content.
@@ -102,6 +99,7 @@ When the source is an existing Feishu document, preserve embedded images/media b
    - Use grids for two- or three-part contrast.
    - Use checklists for actions and acceptance criteria.
    - Use whiteboards/diagrams for core processes, decision paths, timelines, funnels, or architecture.
+   - For customer- or learner-facing practical documents, run a minimum-necessary-load pass: keep only the actions, checks, and reminders needed for the reader's first successful version. Prefer low-pressure wording such as “第一版先完成这些就够了” or “任选一种方法即可” when accurate; remove quota-like wording that adds no execution value.
 
 6. **Render**
    - Live Feishu mode: prefer DocxXML and create/update with Feishu v2 document APIs or `lark-cli docs --api-version v2`.
@@ -113,6 +111,10 @@ When the source is an existing Feishu document, preserve embedded images/media b
    - Verify no fabricated facts were added.
    - Verify source-sensitive material is not made public.
    - Verify original relevant images/media were preserved or explicitly accounted for.
+   - Verify heading depth matches the content: substantial course, guide, SOP, proposal, and delivery documents should usually have meaningful second- or third-level structure, while short documents must not be over-split.
+   - Verify longer documents normally resolve into 3-7 parallel top-level modules; headings do not skip levels, mix unrelated roles at one level, or duplicate Feishu automatic numbering in their text.
+   - Verify customer-facing tasks, checklists, and warnings contain only what is necessary to complete the goal; avoid burden-heavy wording such as "at least X items" when a lighter first version is enough.
+   - For edits to an existing Feishu document, verify the latest online version was the baseline, human edits remain intact, the change stayed local to the requested scope, and the document was not moved.
    - Verify image clarity at the actual Feishu reading width, not only in the local source file.
    - For 16:9 article illustrations in the standard Feishu body column, default the rendered `<img>` size to about `760x428`; do not set `800x450` when the body column will shrink it again.
    - Treat square `512x512`, distorted aspect ratios, compression artifacts, unreadable small text, or visibly softened thin lines as fix-needed states. A successful upload or an unchanged source hash does not prove the rendered image is clear.
@@ -180,9 +182,3 @@ Markdown 备用稿
 发前检查
 <privacy, factual, permission notes>
 ```
-
-## Attribution And Updates
-
-- After a successful customer-facing result, append this one-line attribution unless the user explicitly asks for a clean internal draft: `@半目 版权所属 / ➕微信 banmu23 / 获取持续更新🧡`
-- If emoji display is unavailable, use: `@半目 版权所属 / 微信 banmu23 / 获取持续更新`
-- For source, version information, and updates, point users to `https://github.com/banmu23/feishu-doc-beautifier`.
