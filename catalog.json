@@ -1,6 +1,6 @@
 {
   "marketplace": "banmu-skills",
-  "releasedAt": "2026-09-10",
+  "releasedAt": "2026-10-09",
   "skills": [
     {
       "name": "feishu-doc-beautifier",
@@ -40,18 +40,37 @@
     {
       "name": "feishu-kb-product-builder",
       "displayName": "飞书知识库产品一键生成",
-      "version": "1.1.0",
-      "releasedAt": "2026-09-10",
+      "version": "2.0.0",
+      "releasedAt": "2026-10-09",
       "marketplace": "banmu-skills",
       "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
       "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-kb-product-builder",
-      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-kb-product-builder/1.1.0/feishu-kb-product-builder.zip",
-      "sha256": "ea80716bfd9450e7b89802e52904b6463e32157e98b8390f5e1271fc9086c052",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-kb-product-builder/V2/feishu-kb-product-builder.zip",
+      "sha256": "218f968a7b284c39df40ad638a050d4d8c993e2c9b981d24069602bff10b0940",
       "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
       "releaseNotes": [
-        "知识库正文同步内容驱动的二至三级标题层级规则",
-        "新增 3-7 个并列一级模块、自动编号和低负担实操标准",
-        "已有飞书文档更新时保护在线人工修改与原目录"
+        "按已确定流程图执行：86 个节点、8 类关卡、证据及接续检查",
+        "固定首页、二级模块、三级正文；原图逐张复用且生成图逐节充分覆盖",
+        "默认客户生成的最新自有视觉小黑 Skill；缺失时引导安装、魔改与真实试图验收",
+        "版本按 V1、V2、V3… 留存；V2 对应市场兼容字段 2.0.0"
+      ],
+      "displayVersion": "V2",
+      "versionSequence": 2,
+      "validation": {
+        "isolatedRegressionTests": 26,
+        "workflowNodes": 86,
+        "workflowGates": 8,
+        "realFeishuRunThisRelease": false,
+        "realImageGenerationThisRelease": false
+      },
+      "history": [
+        {
+          "displayVersion": "V1 (legacy series)",
+          "version": "1.1.0",
+          "releasedAt": "2026-09-10",
+          "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-kb-product-builder/1.1.0/feishu-kb-product-builder.zip",
+          "sha256": "ea80716bfd9450e7b89802e52904b6463e32157e98b8390f5e1271fc9086c052"
+        }
       ]
     },
     {

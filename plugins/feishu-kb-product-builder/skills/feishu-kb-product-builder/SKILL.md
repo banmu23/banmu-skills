@@ -1,196 +1,75 @@
 ---
 name: feishu-kb-product-builder
-description: Build high-quality Feishu/Lark knowledge-base products from course materials, Feishu docs, local folders, images, notes, transcripts, and client source content. Use when the user asks to create, restructure, beautify, illustrate, publish, or package a Feishu knowledge base, wiki, course product, training manual, productized SOP, or paid knowledge-base product, including homepage, module pages, detailed lesson docs, source-image reuse, mandatory Feishu document beautification, mandatory Xiaohei/client visual-IP illustrations, Feishu setup guidance, and cross-platform use in Codex, Claude Code, ChatGPT, Hermes, Workbuddy, ima copilot, or similar Agents.
+description: 把真实课程、飞书文档、本地资料和图片制作成可跟做的飞书知识库产品。用于新建、重构、续写或更新知识库；固定首页、二级模块、三级正文，逐篇确认、美化、复用原图并充分生成客户自有视觉小黑配图，按流程和证据验收。
+metadata:
+  version: V2
 ---
 
-# Feishu Knowledge Base Product Builder
+# 飞书知识库产品一键生成 · V2
 
-Use this skill to turn real source materials into a customer-facing Feishu knowledge-base product that can be read, followed, sold, and iterated.
+## 执行入口
 
-The goal is not to summarize files. The goal is to build a usable product: clear structure, practical docs, source evidence, polished Feishu layout, appropriate illustrations, and a beginner-friendly execution path.
+先读 [确定流程图](references/流程图.md) 与 [执行及证据协议](references/执行与证据.md)。`references/workflow.json` 与脚本是同一流程的机器检查入口，不能用临时长提示词替代步骤。修改工作流时先优化流程图，按用户已确认的选择定稿，再同步节点、脚本、说明和安装包；不擅自换流程。
 
-## Non-Negotiables
+每个阶段记录输入、动作、必要提问、产物、实际证据、失败返回和下一步。用户已确认的偏好与授权沿用，不重复询问。每次通常只给新手 1–3 个需要他处理的动作；普通技术操作由 Agent 完成。
 
-- Stay inside the provided source materials. Do not invent cases, prices, results, screenshots, claims, course content, or customer feedback.
-- First interact with the user on the plan, structure, naming, source boundary, Feishu target, and visual rules. Repeat plan revisions until the user confirms. Only then perform concrete writes, deletes, Feishu operations, image generation, or packaging actions.
-- Use the fixed Feishu wiki hierarchy unless the user explicitly changes it: Level 1 is only the homepage/module entry doc; Level 2 contains module docs; Level 3 contains each module's section/body docs.
-- Do not make the reader manually fill forms that an Agent should generate, diagnose, classify, or draft. Let the Agent do the heavy work; give the reader confirmation, correction, and execution steps.
-- Build one document at a time by default after the structure is created. For each doc: write copy first, ask for confirmation, beautify the Feishu doc, insert source images, then generate and insert Xiaohei/client visual-IP illustrations.
-- Module docs are concise guide/index docs. Section docs are detailed execution docs. Do not turn module docs into long lessons, and do not make section docs shallow.
-- Inside each substantial page, design headings from the content: normally converge a longer guide into 3-7 parallel top-level modules, use second-level headings for parallel subtopics, and use third-level headings only for real nested steps, methods, or questions. Short pages may stay at one or two levels.
-- Keep customer and learner workload minimal. Include only the actions, checks, and reminders needed for a successful first version; distinguish required work from optional upgrades and avoid quota-like pressure language.
-- After each doc copy is confirmed, actively invoke/use `feishu-doc-beautifier` if available. If it is not installed or unavailable, make the best possible Feishu layout manually with callouts, tables, checklists, sub-page navigation, spacing, and block structure; do not skip beautification.
-- After beautification and source-image insertion, actively invoke/use the visual-IP illustration skill. For internal work use `customer-visual-ip-illustrations`; for customers use the customer's own Xiaohei/visual-IP skill. If the customer has no such skill, guide them step by step to install, create, or adapt one before generating final illustrations.
-- Image count is content-adaptive, not fixed. Add images where they help understanding: key judgments, operating steps, stuck points, turning points, and loops.
-- If source Feishu/course docs include reusable images, count the original images first and insert every usable original image directly into the new doc. Do not replace source visuals with screenshots or collages.
-- For customer-visible packages, remove private/internal names, local paths, customer names, and proprietary examples unless the user explicitly wants an internal-only package.
-- For platform-facing product copy, avoid income promises, absolute outcomes, forced traffic-diversion language, and risky marketing wording. Treat this as an execution constraint; do not put the risk rule itself into the knowledge-base body unless requested.
+## 必须遵守的产品规则
 
-## Update Check And Safe Upgrade
+- 仅基于明确允许的真实资料。先只读取源、核对版本与图片，再给方案；只读授权不包含写入、删除、清空、移动或公开发布。缺正文只保留框架，不能编造课程、案例、价格、收益或反馈。
+- 产品标题、素材边界、目标位置、页面结构、执行顺序和视觉方案须确认后才正式创建、编辑或生图。当前任务已经明确授权的操作不重复请求。新的破坏性动作或范围变化另行确认。
+- 知识库节点固定三级：**唯一首页 → 二级模块页 → 三级正文**。模块不得与首页并列。文档内标题另按内容安排，较长文通常 3–7 个并列一级主题，再按需要展开二三级；短页面可更少。
+- 默认先搭本期完整骨架，再逐篇：**首页 → 当前模块页 → 该模块正文 → 下一模块**。首页/模块页提纲挈领并有导航；正文让纯新手能复制口令、提供输入、检查结果与进入下一步。Agent 承担诊断、整理、生成，客户仅回答、选择、确认和纠错。
+- 每篇固定顺序：**深读本篇来源 → 草稿 → 文案确认 → 飞书美化 → 复用所有可用原图 → 充分生成自有视觉小黑配图 → 单篇验收**。完成后检查首页与模块页导航，再推进下一篇。
+- 美化 Skill 可用就实际调用 `feishu-doc-beautifier` 或等价能力；不可用也须按标准手动美化，不得跳过排版。
+- **双轨配图**：能用原材料中的清晰原图就直接用，逐张统计、判断、插入、对账；再充分适当地配生成图。源图承担真实证据/界面/操作，生成图解释观点、步骤、转折、误区和闭环。不能只挑少量原图、以截图拼接替代，或用生成图伪造证据。
+- 配图逐节做覆盖表，不预设固定张数或上限，不以最少张数为目标。每个重要理解点都要覆盖；发现遗漏就补图。正文至少一张合格自有 IP 生成图只是下限，不是目标。仅纯导航且没有理解难点的页可记录有依据的不适用原因。
+- 从 `references/runtime-profile.json` 读取部署默认。内部使用配置指定的最新自有视觉小黑 Skill；**客户默认选客户生成的、归属匹配、已确认角色家族的最新自有视觉小黑 Skill**。不能把别人的角色或最新修改时间当客户自己的版本。
+- 客户缺自有视觉 Skill：按 [从安装到魔改的引导](references/视觉IP配图引导.md) 从 0 到 1 带着安装基础能力、魔改自有角色、确认命名和风格、实际试图并验收，再回来配正文。不以通用图、他人形象或零图替代。能力不可用就保存断点并报告缺口。
+- 图片须实际打开逐图检查含义、身份、中文、比例、肢体与清晰度。默认真实 AI 生成 16:9 PNG；按所选视觉 Skill 的人物和风格规则执行。原图保持原比例。飞书显示参考约 760px 宽且等比例，以实际阅读清晰度为准；查方图、白下巴、模糊与拉伸。
+- 更新现有飞书文档前重新读取在线最新版本，保护人工修改、表格、原图和链接，局部更新，保持原目录。完成后回读并实际预览。上传成功或哈希一致不能替代在线呈现验收。
+- 客户可见正文不放本地路径、内部状态话术、账号凭据、未脱敏截图或他人私密案例。平台限制作为编辑约束，不写成客户后台说明。
 
-On the first use in a new session, check the current release record:
+## 阶段门槛与接续
 
-`https://raw.githubusercontent.com/banmu23/banmu-skills/main/versions/feishu-kb-product-builder.json`
-
-- Compare the installed `VERSION` with the public version record.
-- If a newer version exists, explain the changes and ask the user to confirm before replacing local files.
-- Never silently overwrite an installed Skill, customer knowledge base, templates, or user-edited files.
-- If no update is needed, continue without interrupting the task.
-
-## Quality First Token Efficiency
-
-Quality, factual accuracy, privacy safety, and business judgment have priority over token saving.
-
-- First identify the output type, source boundary, Feishu target, and minimum necessary materials; do not load the whole workbench by default.
-- Keep SKILL.md focused on core workflow and route long templates, platform details, image rules, and QA standards to references.
-- Read references only when their routing condition applies.
-- For long course sources, Feishu docs, transcripts, PDFs, and image evidence, extract in batches, build indexes, and then read deeply only where needed.
-- Ask only for missing variables that materially affect the product; infer safe defaults from source materials.
-- Save tokens by reducing repetition and process narration, never by skipping source verification, source-image checks, privacy review, Feishu beautification, illustration QA, or final product quality.
-
-## Startup Workflow
-
-1. Clarify the product frame:
-   - product title or naming direction
-   - target readers and pain points
-   - source materials and hard boundaries
-   - Feishu wiki/doc target
-   - author block and brand voice
-   - visual-IP / illustration skill availability
-   - sales-platform safety constraints
-
-2. Present a plan before execution:
-   - knowledge-base title
-   - fixed 3-level wiki hierarchy
-   - Level 2 module outline and Level 3 section outline
-   - page-type rules: homepage entry doc, module docs, section/body docs
-   - source reading and image reuse plan
-   - Feishu beautification and illustration sequence
-   - confirmation checkpoints
-
-3. Wait for user confirmation. If the user changes anything, update the plan and ask for confirmation again before executing.
-
-4. Execute in this order:
-   - create or reset Feishu structure only after confirmation
-   - build the full wiki skeleton first: homepage as Level 1, module docs as Level 2, section docs as Level 3; future modules may remain empty until written
-   - write one doc at a time: homepage, then current module doc, then its Level 3 section docs in order
-   - after each doc draft, ask the user to confirm the copy
-   - after confirmation, actively call/use `feishu-doc-beautifier`; if unavailable, manually beautify to the best available Feishu layout standard
-   - after beautification, insert usable source images
-   - after source images, actively call/use `customer-visual-ip-illustrations` for internal docs or the customer's configured visual-IP skill for client docs
-   - audit links, hierarchy, images, dimensions, sensitive wording, and missing source references
-   - when editing an existing Feishu document, fetch the latest online version immediately before writing, preserve human edits, prefer local block/text patches, and keep the document in its current folder/wiki node unless a move was explicitly requested
-
-## Mandatory Sub-Skill Orchestration
-
-For every homepage, module doc, and section/body doc, follow this exact post-copy sequence:
+建立用户确认过的任务目录，按 `references/run-template.json` 生成 `run.json`。在每个阶段完成后运行：
 
 ```text
-copy approved
-  -> call/use feishu-doc-beautifier if installed
-  -> if unavailable, manually apply the Feishu beautification standard
-  -> insert all usable source images
-  -> call/use Xiaohei or client visual-IP illustration skill
-  -> if no visual-IP skill exists, guide setup/adaptation before final illustration
-  -> audit layout and image dimensions
+python3 scripts/workflow_guard.py gate --run 任务目录/run.json --stage plan
+python3 scripts/workflow_guard.py gate --run 任务目录/run.json --stage access
+python3 scripts/workflow_guard.py gate --run 任务目录/run.json --stage copy --doc 文档ID
+python3 scripts/workflow_guard.py gate --run 任务目录/run.json --stage beautify --doc 文档ID
+python3 scripts/workflow_guard.py gate --run 任务目录/run.json --stage originals --doc 文档ID
+python3 scripts/workflow_guard.py gate --run 任务目录/run.json --stage visual --doc 文档ID
+python3 scripts/workflow_guard.py gate --run 任务目录/run.json --stage page --doc 文档ID
+python3 scripts/workflow_guard.py gate --run 任务目录/run.json --stage final
 ```
 
-Never treat beautification or visual-IP illustration as optional decorations. They are part of the knowledge-base product standard.
+前置阶段没通过、文件不存在、已确认文案变更、必需图未覆盖、图片不合格或验收证据缺失时，脚本拒绝过关。修复后重新走受影响环节。脚本检查记录与文件，不可能证明模型真实理解、替代目视或保证绝不遗漏。
 
-If `feishu-doc-beautifier` is installed:
+恢复时回读 `run.json`、`state.json`、来源与实际文件，执行 `audit`。旧证据因内容变化失效时重新确认/制作，不能凭聊天摘要跳步。若平台不能运行 Python，按同一字段逐项人工检查，留存完整结果，并明确本轮未运行脚本；不可降低关卡或伪称脚本通过。
 
-- invoke it directly after copy approval
-- preserve source images, sub-page navigation, tables, and content structure
-- make homepage/module docs concise and polished
-- make section docs scannable with steps, command blocks, checks, and acceptance criteria
-- keep same-level headings parallel; when Feishu automatic numbering is enabled, do not repeat `1 / 1.1 / 1.1.1` inside heading text
-- keep first-version actions light and necessary instead of turning optional preparation into mandatory workload
+## 完成状态
 
-If `feishu-doc-beautifier` is not installed:
+分别报告骨架、文案、排版、原图、生成图、单篇与整库验收。自动模式交付飞书目标及已验证阅读路径；手动模式交付目录、稿件、原图/生成图、插入说明及检查材料。手动内容包完成不等于飞书已上线；必需项没通过不能宣布整个知识库完成。默认不公开发布或给他人发消息。
 
-- explain that the beautifier skill is missing
-- continue with best-effort manual Feishu beautification
-- use callouts, tables, checklists, dividers, sub-page navigation, and clear heading hierarchy
-- do not proceed to final illustration until the document has been beautified as much as the current environment allows
+## 版本、升级与维护
 
-If this is internal work:
+目录与客户展示使用 **V1、V2、V3、V4……**，每次新建下一版本并保留完整历史源、图、说明与英文 ZIP，不覆盖旧包。VERSION 保存 V2 这样的业务版本；市场需要时以 2.0.0 对应 V2，仅用于兼容字段。读取旧依赖时兼容遗留数字版本。
 
-- use `customer-visual-ip-illustrations` after beautification
-- use the established the configured visual-IP style and image QA rules
+新会话首次使用，按 [升级策略](references/update-policy.md) 检查唯一正式发行源的版本公告；有新版先告知变化，用户确认后才替换；离线时如实说明未核验，不阻塞现有版本。客户自定义与数据不得静默覆盖。
 
-If customer work:
+真实终稿、来源或稳定反馈变化时，先判断是否影响流程图，再按确认图同步主文件、references、脚本、UI 配置、说明、模板、提示词和 ZIP。临时想法、未经验证的能力与私密资料不直接进入公开包。ZIP 根目录必须直接有 SKILL.md。
 
-- ask for the customer's visual-IP/Xiaohei skill name or reference package
-- if installed, invoke it after beautification
-- if missing, guide the customer to create/adapt/install it using their own persona, visual references, expression rules, forbidden styles, image size, and QA rules
-- do not use the configured visual-IP as the customer's default visual IP unless explicitly authorized
+## 质量优先的 Token 节省
 
-## Fixed Wiki Hierarchy
+成品质量、事实准确、隐私安全和业务判断优先于省 Token。按索引只读必要来源，长资料分批提炼，复用已确认选择和证据；不能省掉深读、原图对账、充分配图、实际调用、目视或在线验收。
 
-Default structure:
+## 按需参考
 
-```text
-Level 1: 首页 / 知识库总览文档
-  Level 2: 01 模块文档
-    Level 3: 1.1 小节正文文档
-    Level 3: 1.2 小节正文文档
-  Level 2: 02 模块文档
-    Level 3: 2.1 小节正文文档
-```
-
-Do not create extra shortcut indexes, backstage pages, update logs, homework pages, or sibling root modules unless the user explicitly asks. If Feishu uses the wiki root doc as the homepage, treat that doc as Level 1 and put all module docs underneath it.
-
-## Page Types
-
-- Homepage entry doc: concise global overview, customer pain points, who it is for, what it helps the reader do, what it does not do, the full module navigation, and how to use the knowledge base. It should be the only Level 1 doc.
-- Module doc: concise guide/index doc for one Level 2 module. It summarizes the module's key judgment, outcomes, sub-doc route, and expected deliverables. It must include Feishu sub-page navigation. It is not a full lesson.
-- Section/body doc: detailed Level 3 execution doc. It must be practical enough that a beginner can follow it step by step, using Agent prompts, source images, checks, and acceptance standards.
-
-Detailed writing, structure, image, Feishu, and QA standards live in `references/制作标准.md`.
-
-## Reference Routing
-
-Read only the files needed for the current task:
-
-- `references/制作标准.md`: use for any actual knowledge-base structure, writing, beautification, image, QA, or delivery work.
-- `references/飞书打通引导.md`: use when Feishu/Lark access, CLI, wiki, docx, media upload, permissions, or manual fallback is needed.
-- `references/视觉IP配图引导.md`: use when generating or inserting Xiaohei-style or client visual-IP illustrations.
-- `references/美化与配图强制流程.md`: use before finishing any document; it defines mandatory beautifier and visual-IP orchestration.
-- `references/客户素材清单.md`: use when the source materials or product boundary are unclear.
-- `references/跨平台调用指南.md`: use when the user wants this skill to run in Claude Code, ChatGPT, Hermes, Workbuddy, ima copilot, or another Agent.
-
-## Default Variables
-
-Ask only for missing variables that materially affect output. Use reasonable defaults where safe.
-
-```text
-{product_title}
-{target_reader}
-{source_materials}
-{target_feishu_wiki_or_doc}
-{author_block}
-{brand_voice}
-{visual_ip_name}
-{visual_ip_skill_or_reference}
-{platform_safety_rules}
-{privacy_boundary}
-```
-
-For internal use, pass the exact author block in `{author_block}`. For customer-visible packages, keep it configurable:
-
-```text
-✔️原创作者：{author_name}丨{contact_or_brand}
-```
-
-For customer-visible packages, make author identity configurable and do not expose the service provider's private product names, customer names, local paths, or private cases.
-
-## Output Discipline
-
-When working with a live Feishu knowledge base, report progress in plain language:
-
-- what was created or updated
-- which document is waiting for copy confirmation
-- whether beautification and illustration have been completed
-- what still needs user review
-
-Do not expose internal block IDs, placeholder tokens, API quirks, tool failures, or local file paths in customer-facing docs.
+- `references/制作标准.md`：每类页面的写法、标题与图文质量。
+- `references/飞书打通引导.md`：权限、实际能力验证、无自动接入的交付。
+- `references/美化与配图强制流程.md`：逐篇后半段的严格顺序。
+- `references/视觉IP配图引导.md`：最新客户自有角色的选择、安装、魔改、试图与充分覆盖。
+- `references/执行与证据.md`、`run-template.json`：状态与证据协议。
+- `references/客户素材清单.md`：最小必要信息。
+- `references/跨平台调用指南.md`：平台差异，不冒称所有平台已实测。

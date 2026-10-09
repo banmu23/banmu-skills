@@ -1,0 +1,5 @@
+{
+  "audience": "customer",
+  "selection": "latest-owned-approved",
+  "version_policy": "V1,V2,V3; legacy semver supported for dependencies"
+}

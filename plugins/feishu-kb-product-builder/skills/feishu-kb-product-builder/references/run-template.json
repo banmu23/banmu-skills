@@ -1,0 +1,230 @@
+{
+  "workflow_version": "V2",
+  "workflow_sha256": "000f2a8de50d6717c0c1080efda188dc7b93e669700ca12bc4a445a7b5449b26",
+  "plan": {
+    "audience": "customer",
+    "owner_id": "customer1",
+    "visual_family": "待确认客户自有角色家族",
+    "confirmed": false,
+    "evidence": "evidence/plan-confirmation.md",
+    "mode": "manual",
+    "deliverable": "content-package",
+    "required_docs": [
+      "home",
+      "module1",
+      "body1"
+    ],
+    "sources": [
+      {
+        "id": "source1",
+        "path": "sources/source1.md",
+        "sha256": "填写真实 SHA256",
+        "read_confirmed": false
+      }
+    ]
+  },
+  "access": {
+    "mode": "manual",
+    "evidence": "evidence/access.md",
+    "verified": [],
+    "nodes": [
+      {
+        "id": "home",
+        "kind": "home",
+        "level": 1,
+        "parent": null
+      },
+      {
+        "id": "module1",
+        "kind": "module",
+        "level": 2,
+        "parent": "home"
+      },
+      {
+        "id": "body1",
+        "kind": "body",
+        "level": 3,
+        "parent": "module1"
+      }
+    ]
+  },
+  "visual_candidates": [],
+  "documents": {
+    "home": {
+      "kind": "home",
+      "source_ids": [
+        "source1"
+      ],
+      "draft": "documents/home.md",
+      "draft_sha256": "填写真实 SHA256",
+      "comprehension_points": [
+        {
+          "anchor": "填写文案中真实存在的小标题",
+          "required_visual": true
+        }
+      ],
+      "approval": {
+        "confirmed": false,
+        "content_sha256": "绑定当前草稿 SHA256",
+        "evidence": "evidence/home-copy.md"
+      },
+      "beautify": {
+        "method": "skill",
+        "passed": false,
+        "copy_sha256": "绑定当前草稿 SHA256",
+        "evidence": "evidence/home-beautify.md"
+      },
+      "originals": {
+        "source_total": 0,
+        "evidence": "evidence/home-originals.md",
+        "images": []
+      },
+      "visual": {
+        "navigation_only": false,
+        "coverage_review_passed": false,
+        "coverage_evidence": "evidence/home-coverage.md",
+        "skill": {
+          "name": "客户自有 Skill 名称",
+          "path": "实际 Skill 绝对路径",
+          "owner_id": "customer1",
+          "family": "客户确认的自有角色家族",
+          "version": "V1",
+          "skill_sha256": "由解析脚本读取",
+          "package_sha256": "由解析脚本读取",
+          "actual_call_verified": false,
+          "call_evidence": "evidence/home-call.md",
+          "owner_evidence": "evidence/visual-owner.md"
+        },
+        "images": [],
+        "coverage": []
+      },
+      "qa": {
+        "passed": false,
+        "content_evidence": "evidence/home-content.md",
+        "package_evidence": "evidence/home-package.md",
+        "readback_evidence": "evidence/home-readback.md",
+        "preview_evidence": "evidence/home-preview.png"
+      }
+    },
+    "module1": {
+      "kind": "module",
+      "source_ids": [
+        "source1"
+      ],
+      "draft": "documents/module1.md",
+      "draft_sha256": "填写真实 SHA256",
+      "comprehension_points": [
+        {
+          "anchor": "填写文案中真实存在的小标题",
+          "required_visual": true
+        }
+      ],
+      "approval": {
+        "confirmed": false,
+        "content_sha256": "绑定当前草稿 SHA256",
+        "evidence": "evidence/module1-copy.md"
+      },
+      "beautify": {
+        "method": "skill",
+        "passed": false,
+        "copy_sha256": "绑定当前草稿 SHA256",
+        "evidence": "evidence/module1-beautify.md"
+      },
+      "originals": {
+        "source_total": 0,
+        "evidence": "evidence/module1-originals.md",
+        "images": []
+      },
+      "visual": {
+        "navigation_only": false,
+        "coverage_review_passed": false,
+        "coverage_evidence": "evidence/module1-coverage.md",
+        "skill": {
+          "name": "客户自有 Skill 名称",
+          "path": "实际 Skill 绝对路径",
+          "owner_id": "customer1",
+          "family": "客户确认的自有角色家族",
+          "version": "V1",
+          "skill_sha256": "由解析脚本读取",
+          "package_sha256": "由解析脚本读取",
+          "actual_call_verified": false,
+          "call_evidence": "evidence/module1-call.md",
+          "owner_evidence": "evidence/visual-owner.md"
+        },
+        "images": [],
+        "coverage": []
+      },
+      "qa": {
+        "passed": false,
+        "content_evidence": "evidence/module1-content.md",
+        "package_evidence": "evidence/module1-package.md",
+        "readback_evidence": "evidence/module1-readback.md",
+        "preview_evidence": "evidence/module1-preview.png"
+      }
+    },
+    "body1": {
+      "kind": "body",
+      "source_ids": [
+        "source1"
+      ],
+      "draft": "documents/body1.md",
+      "draft_sha256": "填写真实 SHA256",
+      "comprehension_points": [
+        {
+          "anchor": "填写文案中真实存在的小标题",
+          "required_visual": true
+        }
+      ],
+      "approval": {
+        "confirmed": false,
+        "content_sha256": "绑定当前草稿 SHA256",
+        "evidence": "evidence/body1-copy.md"
+      },
+      "beautify": {
+        "method": "skill",
+        "passed": false,
+        "copy_sha256": "绑定当前草稿 SHA256",
+        "evidence": "evidence/body1-beautify.md"
+      },
+      "originals": {
+        "source_total": 0,
+        "evidence": "evidence/body1-originals.md",
+        "images": []
+      },
+      "visual": {
+        "navigation_only": false,
+        "coverage_review_passed": false,
+        "coverage_evidence": "evidence/body1-coverage.md",
+        "skill": {
+          "name": "客户自有 Skill 名称",
+          "path": "实际 Skill 绝对路径",
+          "owner_id": "customer1",
+          "family": "客户确认的自有角色家族",
+          "version": "V1",
+          "skill_sha256": "由解析脚本读取",
+          "package_sha256": "由解析脚本读取",
+          "actual_call_verified": false,
+          "call_evidence": "evidence/body1-call.md",
+          "owner_evidence": "evidence/visual-owner.md"
+        },
+        "images": [],
+        "coverage": []
+      },
+      "qa": {
+        "passed": false,
+        "content_evidence": "evidence/body1-content.md",
+        "package_evidence": "evidence/body1-package.md",
+        "readback_evidence": "evidence/body1-readback.md",
+        "preview_evidence": "evidence/body1-preview.png"
+      }
+    }
+  },
+  "final": {
+    "passed": false,
+    "kind": "content-package",
+    "evidence": "evidence/final.md",
+    "target_url": "",
+    "readback_evidence": "evidence/final-readback.md",
+    "preview_evidence": "evidence/final-preview.png"
+  }
+}
