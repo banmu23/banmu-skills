@@ -1,0 +1,6 @@
+interface:
+  display_name: "飞书一键转 ima 知识库"
+  short_description: "将飞书目录和原链接对应转入 ima，生成实操手册、描述与封面，并严格核验成员权限"
+  default_prompt: "请使用 $feishu-to-ima-kb，把我提供的飞书知识库转成匹配的 ima 知识库，通过已连接 API 操作，按流程检查原链接、手册、封面与成员权限，并保留可接续记录。"
+policy:
+  allow_implicit_invocation: true

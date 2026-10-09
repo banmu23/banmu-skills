@@ -1,0 +1,19 @@
+{
+  "name": "feishu-to-ima-kb",
+  "display_name": "飞书一键转 ima 知识库",
+  "business_version": "V1",
+  "version": "1.0.0",
+  "developer": "半目",
+  "support_wechat": "banmu23",
+  "release_status": "packaged",
+  "minimum_python": "3.9",
+  "runtime_dependencies": [
+    "Existing authorized Feishu reader (lark-cli adapter included)",
+    "Existing authorized ima OpenAPI or equivalent connector",
+    "Image generation and actual image inspection capability"
+  ],
+  "verified_platform": "Codex on macOS; read-only live checks and simulated write tests; see external validation report",
+  "repository": "https://github.com/banmu23/banmu-skills",
+  "version_manifest": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/versions/feishu-to-ima-kb.json",
+  "release_channel": "github"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "feishu-to-ima-kb",
+  "version": "1.0.0",
+  "description": "按原飞书目录生成对应 ima 知识库，包含根目录手册、原始链接、描述和封面，独立核验成员权限。",
+  "author": {
+    "name": "半目",
+    "url": "https://github.com/banmu23"
+  },
+  "homepage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-to-ima-kb",
+  "repository": "https://github.com/banmu23/banmu-skills",
+  "keywords": [
+    "banmu",
+    "agent-skill",
+    "feishu-to-ima-kb",
+    "feishu",
+    "ima"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "飞书一键转 ima 知识库",
+    "shortDescription": "飞书原目录与原链接对应转入 ima",
+    "longDescription": "按原飞书目录生成对应 ima 知识库，包含根目录手册、原始链接、描述和封面，独立核验成员权限。",
+    "developerName": "半目",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-to-ima-kb",
+    "defaultPrompt": [
+      "把这个飞书知识库转成对应的 ima 知识库",
+      "继续上次飞书转 ima 任务"
+    ],
+    "brandColor": "#FF8A3D"
+  }
+}

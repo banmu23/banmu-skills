@@ -174,6 +174,36 @@
         "生成客户安全版一键上传包",
         "加入首次使用版本检查与确认更新机制"
       ]
+    },
+    {
+      "name": "feishu-to-ima-kb",
+      "displayName": "飞书一键转 ima 知识库",
+      "version": "1.0.0",
+      "displayVersion": "V1",
+      "versionSequence": 1,
+      "releasedAt": "2026-10-09",
+      "marketplace": "banmu-skills",
+      "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+      "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-to-ima-kb",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-to-ima-kb/V1/feishu-to-ima-kb.zip",
+      "sha256": "3fb3f09f34cbf19dad60e90681f272240b1d9af8d6145dd01a693133afa58f49",
+      "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+      "releaseNotes": [
+        "按已确认 43 节点流程执行，保留原目录标题和原始飞书 URL",
+        "根目录第一入口实操手册、一句话描述和客户品牌封面",
+        "权限必须取得实际证据；默认自动写入未验证时由客户必要手动设置并明确反馈",
+        "24 项模拟故障测试与原案例只读核验，未冒充独立全流程线上写入实测"
+      ],
+      "validation": {
+        "isolatedRegressionTests": 24,
+        "workflowNodes": 43,
+        "workflowEdges": 50,
+        "liveReadOnlySourceModules": 8,
+        "liveReadOnlySourceLinks": 21,
+        "independentEndToEndOnlineWriteTest": false,
+        "defaultPermissionWriteAdapterVerified": false
+      },
+      "history": []
     }
   ]
 }
