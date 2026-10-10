@@ -1,0 +1,6 @@
+interface:
+  display_name: "个人IP正文配图（公开逻辑版）"
+  short_description: "V2：使用自有角色在关键位置制作场景丰富、表情生动、光影细腻的正文图"
+  default_prompt: "请用 $xiaohei-illustrations-banmu-auntie 先核对并引导创建我的自有角色，再按关键理解点制作高质量正文插图。"
+policy:
+  allow_implicit_invocation: true

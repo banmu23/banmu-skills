@@ -1,7 +1,7 @@
 interface:
   display_name: "飞书知识库产品一键生成"
   short_description: "按确定流程逐篇制作、美化、充分配图并验收可交付的飞书知识库产品"
-  default_prompt: "Use $feishu-kb-product-builder 按 V2 确定流程制作飞书知识库，确认方案后逐篇写作、美化、复用原图并充分生成我的视觉小黑配图。"
+  default_prompt: "Use $feishu-kb-product-builder 按 V3 确定流程制作飞书知识库，确认方案后逐篇写作、美化、复用原图并充分生成我的视觉小黑配图。"
 
 policy:
   allow_implicit_invocation: true

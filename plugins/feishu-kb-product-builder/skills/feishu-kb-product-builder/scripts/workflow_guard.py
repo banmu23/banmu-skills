@@ -8,6 +8,7 @@ import zlib
 from datetime import datetime,timezone
 from pathlib import Path
 from resolve_visual_skill import resolve,ResolutionError
+from visual_contract import validate_design,ContractError
 
 HERE=Path(__file__).resolve().parents[1]
 WORKFLOW=HERE/'references/workflow.json'
@@ -41,7 +42,7 @@ class Guard:
     def __init__(self,path):
         self.path=Path(path).resolve();self.root=self.path.parent
         self.run=json.loads(self.path.read_text(encoding='utf-8'))
-        require(self.run.get('workflow_version')=='V2','运行记录不是 V2')
+        require(self.run.get('workflow_version')=='V3','运行记录不是 V3')
         require(self.run.get('workflow_sha256')==sha(WORKFLOW),'流程图版本/哈希不一致，先迁移并复核，不继承旧通过状态')
         self.state_path=self.root/'state.json'
         self.state=json.loads(self.state_path.read_text()) if self.state_path.exists() else {'schema':2,'checkpoints':{}}
@@ -195,9 +196,16 @@ class Guard:
                         else: require(item.get('reason'),'文字足够须说明内容判断依据')
                     referenced=set().union(*(set(c.get('image_ids',[])) for c in coverage))
                     require(ids<=referenced,'有生成图未对应正文理解点')
+                    validate_design(images,v.get('group_review'),self.artifact,
+                                    draft=(self.root/d['draft']).read_text(encoding='utf-8'),
+                                    sole_human=json.loads((HERE/'references/runtime-profile.json').read_text()).get('visual_policy',{}).get('sole_human') is True and plan.get('audience')=='internal')
+                    for im in images:
+                        require(im['anchor'] in byanchor and im['id'] in byanchor[im['anchor']].get('image_ids',[]),'图片精确锚点与覆盖表不一致')
                     payload={'visual':v,'resolved':actual}
             else:
                 q=d['qa'];require(q.get('passed') is True,'单篇尚未验收通过')
+                require(all(q.get(k) is True for k in ('preservation_passed','presentation_clean','placement_review_passed')),'原资源保护、客户呈现或关键位置尚未验收')
+                require(isinstance(q.get('scope'),str) and q['scope'].strip(),'须记录实际预览方式/范围及未实测项')
                 self.artifact(q.get('content_evidence'))
                 if mode=='auto':
                     self.artifact(q.get('readback_evidence'));self.artifact(q.get('preview_evidence'))
@@ -246,6 +254,6 @@ def main():
                 else:g.verify(key)
             result={'ok':True,'checked_gates':len(g.state['checkpoints']),'complete':'final' in g.state['checkpoints']}
         print(json.dumps(result,ensure_ascii=False));return 0
-    except (GateError,ResolutionError,KeyError,ValueError,OSError,struct.error) as e:
+    except (GateError,ContractError,ResolutionError,KeyError,ValueError,OSError,struct.error) as e:
         print(json.dumps({'ok':False,'next_action':str(e)},ensure_ascii=False));return 1
 if __name__=='__main__':raise SystemExit(main())

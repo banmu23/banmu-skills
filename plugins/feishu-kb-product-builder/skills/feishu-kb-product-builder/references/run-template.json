@@ -1,6 +1,6 @@
 {
-  "workflow_version": "V2",
-  "workflow_sha256": "000f2a8de50d6717c0c1080efda188dc7b93e669700ca12bc4a445a7b5449b26",
+  "workflow_version": "V3",
+  "workflow_sha256": "bae1abbdbf10e44282872d205484649db55aca659856f9a0e980dec2dcb94614",
   "plan": {
     "audience": "customer",
     "owner_id": "customer1",
@@ -96,14 +96,25 @@
           "owner_evidence": "evidence/visual-owner.md"
         },
         "images": [],
-        "coverage": []
+        "coverage": [],
+        "group_review": {
+          "passed": false,
+          "coverage": false,
+          "scene_expression": false,
+          "quality": false,
+          "evidence": "evidence/group-review.md"
+        }
       },
       "qa": {
         "passed": false,
         "content_evidence": "evidence/home-content.md",
         "package_evidence": "evidence/home-package.md",
         "readback_evidence": "evidence/home-readback.md",
-        "preview_evidence": "evidence/home-preview.png"
+        "preview_evidence": "evidence/home-preview.png",
+        "preservation_passed": false,
+        "presentation_clean": false,
+        "placement_review_passed": false,
+        "scope": ""
       }
     },
     "module1": {
@@ -152,14 +163,25 @@
           "owner_evidence": "evidence/visual-owner.md"
         },
         "images": [],
-        "coverage": []
+        "coverage": [],
+        "group_review": {
+          "passed": false,
+          "coverage": false,
+          "scene_expression": false,
+          "quality": false,
+          "evidence": "evidence/group-review.md"
+        }
       },
       "qa": {
         "passed": false,
         "content_evidence": "evidence/module1-content.md",
         "package_evidence": "evidence/module1-package.md",
         "readback_evidence": "evidence/module1-readback.md",
-        "preview_evidence": "evidence/module1-preview.png"
+        "preview_evidence": "evidence/module1-preview.png",
+        "preservation_passed": false,
+        "presentation_clean": false,
+        "placement_review_passed": false,
+        "scope": ""
       }
     },
     "body1": {
@@ -208,14 +230,25 @@
           "owner_evidence": "evidence/visual-owner.md"
         },
         "images": [],
-        "coverage": []
+        "coverage": [],
+        "group_review": {
+          "passed": false,
+          "coverage": false,
+          "scene_expression": false,
+          "quality": false,
+          "evidence": "evidence/group-review.md"
+        }
       },
       "qa": {
         "passed": false,
         "content_evidence": "evidence/body1-content.md",
         "package_evidence": "evidence/body1-package.md",
         "readback_evidence": "evidence/body1-readback.md",
-        "preview_evidence": "evidence/body1-preview.png"
+        "preview_evidence": "evidence/body1-preview.png",
+        "preservation_passed": false,
+        "presentation_clean": false,
+        "placement_review_passed": false,
+        "scope": ""
       }
     }
   },

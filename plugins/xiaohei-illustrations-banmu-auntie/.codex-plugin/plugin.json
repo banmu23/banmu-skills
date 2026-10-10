@@ -1,0 +1,31 @@
+{
+  "name": "xiaohei-illustrations-banmu-auntie",
+  "author": {
+    "name": "半目",
+    "url": "https://github.com/banmu23"
+  },
+  "homepage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/xiaohei-illustrations-banmu-auntie",
+  "repository": "https://github.com/banmu23/banmu-skills",
+  "keywords": [
+    "agent-skill",
+    "xiaohei-illustrations-banmu-auntie"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "小黑配图半目姨版",
+    "developerName": "半目",
+    "category": "Content & Communication",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/banmu23/banmu-skills/tree/main/plugins/xiaohei-illustrations-banmu-auntie",
+    "defaultPrompt": [
+      "基于我的资料在关键位置充分配图"
+    ],
+    "longDescription": "V2：按确定流程制作关键位置配图，内容适配场景、丰富表演及细腻光影，原资源保护与真实证据验收。公开逻辑包不含作者专属形象，须创建用户自有角色。",
+    "shortDescription": "关键位置配图：场景丰富、表情生动、光影细腻"
+  },
+  "version": "2.0.0",
+  "description": "V2：按确定流程制作关键位置配图，内容适配场景、丰富表演及细腻光影，原资源保护与真实证据验收。公开逻辑包不含作者专属形象，须创建用户自有角色。"
+}

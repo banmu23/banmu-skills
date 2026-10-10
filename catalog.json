@@ -1,6 +1,6 @@
 {
   "marketplace": "banmu-skills",
-  "releasedAt": "2026-10-09",
+  "releasedAt": "2026-10-10",
   "skills": [
     {
       "name": "feishu-doc-beautifier",
@@ -40,30 +40,38 @@
     {
       "name": "feishu-kb-product-builder",
       "displayName": "飞书知识库产品一键生成",
-      "version": "2.0.0",
-      "releasedAt": "2026-10-09",
+      "version": "3.0.0",
+      "displayVersion": "V3",
+      "versionSequence": 3,
+      "releasedAt": "2026-10-10",
       "marketplace": "banmu-skills",
       "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
       "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-kb-product-builder",
-      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-kb-product-builder/V2/feishu-kb-product-builder.zip",
-      "sha256": "218f968a7b284c39df40ad638a050d4d8c993e2c9b981d24069602bff10b0940",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-kb-product-builder/V3/feishu-kb-product-builder.zip",
+      "sha256": "203b7917f8b72db93857055df41c0522cbc12146b5270d9d45dbe85e42b311b5",
       "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
       "releaseNotes": [
-        "按已确定流程图执行：86 个节点、8 类关卡、证据及接续检查",
-        "固定首页、二级模块、三级正文；原图逐张复用且生成图逐节充分覆盖",
-        "默认客户生成的最新自有视觉小黑 Skill；缺失时引导安装、魔改与真实试图验收",
-        "版本按 V1、V2、V3… 留存；V2 对应市场兼容字段 2.0.0"
+        "关键理解点先定解释任务与准确正文锚点，再按内容设计丰富场景、具体表演和高质感光影",
+        "已有优质场景定向修改，原图/附件/人工结构保护；客户正文无来源或制作标注",
+        "逐图QA、整组覆盖/场景表情/质感复核、真实图文呈现，上传或脚本不代替验收",
+        "整数版本历史、英文ZIP、快照后安装、唯一GitHub同步并回读验收"
       ],
-      "displayVersion": "V2",
-      "versionSequence": 2,
       "validation": {
-        "isolatedRegressionTests": 26,
-        "workflowNodes": 86,
-        "workflowGates": 8,
+        "workflowNodes": 97,
+        "recordRegressionTests": 36,
+        "publicCharacterAssetsIncluded": false,
         "realFeishuRunThisRelease": false,
-        "realImageGenerationThisRelease": false
+        "privateRealImageEditRegression": 0,
+        "allPlatformsTested": false
       },
       "history": [
+        {
+          "displayVersion": "V2",
+          "version": "2.0.0",
+          "releasedAt": "2026-10-09",
+          "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-kb-product-builder/V2/feishu-kb-product-builder.zip",
+          "sha256": "218f968a7b284c39df40ad638a050d4d8c993e2c9b981d24069602bff10b0940"
+        },
         {
           "displayVersion": "V1 (legacy series)",
           "version": "1.1.0",
@@ -204,6 +212,37 @@
         "defaultPermissionWriteAdapterVerified": false
       },
       "history": []
+    },
+    {
+      "name": "xiaohei-illustrations-banmu-auntie",
+      "displayName": "小黑配图半目姨版",
+      "version": "2.0.0",
+      "displayVersion": "V2",
+      "versionSequence": 2,
+      "releasedAt": "2026-10-10",
+      "marketplace": "banmu-skills",
+      "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+      "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/xiaohei-illustrations-banmu-auntie",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/xiaohei-illustrations-banmu-auntie/V2/xiaohei-illustrations-banmu-auntie.zip",
+      "sha256": "e83a43cbd7ce71f136f18019ef2f0d48ac4679477119e54e03bc2694b48b757a",
+      "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+      "releaseNotes": [
+        "公开逻辑版：不含作者专属形象、外貌配置及参考；客户从自有角色确认、安装魔改到真实试图验收",
+        "关键理解点先定解释任务与准确正文锚点，再按内容设计丰富场景、具体表演和高质感光影",
+        "已有优质场景定向修改，原图/附件/人工结构保护；客户正文无来源或制作标注",
+        "逐图QA、整组覆盖/场景表情/质感复核、真实图文呈现，上传或脚本不代替验收",
+        "整数版本历史、英文ZIP、快照后安装、唯一GitHub同步并回读验收"
+      ],
+      "validation": {
+        "workflowNodes": 18,
+        "recordRegressionTests": 3,
+        "publicCharacterAssetsIncluded": false,
+        "realFeishuRunThisRelease": false,
+        "privateRealImageEditRegression": 1,
+        "allPlatformsTested": false
+      },
+      "history": [],
+      "privateHistoryNote": "V1为内部专属历史，仅本地保留完整源、流程与ZIP；不公开再分发形象资产。V2为首次公开逻辑包。"
     }
   ]
 }

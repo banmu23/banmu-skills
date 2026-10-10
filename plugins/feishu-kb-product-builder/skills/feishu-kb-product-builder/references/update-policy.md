@@ -1,6 +1,6 @@
 # V1 / V2 / V3 版本与安全升级
 
-业务版本与目录：V1、V2、V3、V4……；当前 V2。市场的 2.0.0 仅映射 V2，兼容旧公告数字版本。旧版源、图、说明、ZIP 均保留，不覆盖历史。
+业务版本与目录：V1、V2、V3、V4……；当前 V3。市场的 3.0.0 仅映射 V3，兼容旧公告数字版本。旧版源、图、说明、ZIP 均保留，不覆盖历史。
 
 唯一正式版本记录：https://raw.githubusercontent.com/banmu23/banmu-skills/main/versions/feishu-kb-product-builder.json
 

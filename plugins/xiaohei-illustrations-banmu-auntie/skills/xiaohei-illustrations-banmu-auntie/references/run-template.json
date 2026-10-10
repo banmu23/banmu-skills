@@ -1,0 +1,59 @@
+{
+  "workflow_version": "V2",
+  "workflow_sha256": "584893724ba0d4e8ccb0ff89b8d1b86a967a0a675698859d7ba186117d5105cb",
+  "sole_human": true,
+  "expected_images": null,
+  "images": [
+    {
+      "id": "g1",
+      "anchor": "填写真实原文短句",
+      "purpose": "填写帮助理解的关键判断",
+      "placement": "紧贴该段之后并记录后接段落",
+      "scene": "填写内容驱动环境/动作/道具/景别",
+      "expression": {
+        "intent": "",
+        "brows_eyes": "",
+        "mouth": "",
+        "gaze": "",
+        "body": ""
+      },
+      "lighting": {
+        "key_light": "",
+        "depth": "",
+        "materials": "",
+        "contact_shadow": ""
+      },
+      "edit_mode": "new",
+      "preserve": "",
+      "original_path": "",
+      "human_count": 1,
+      "qa_checks": {
+        "meaning": false,
+        "identity": false,
+        "anatomy_gaze": false,
+        "expression": false,
+        "chinese": false,
+        "physical_relation": false,
+        "scene": false,
+        "lighting": false,
+        "clarity": false,
+        "preservation": false
+      },
+      "qa_evidence": "evidence/g1-qa.md",
+      "file": "images/g1.png",
+      "dimensions": [],
+      "sha256": "",
+      "tool": "",
+      "generation_origin": "",
+      "references": [],
+      "visual_qa": "pending"
+    }
+  ],
+  "group_review": {
+    "passed": false,
+    "coverage": false,
+    "scene_expression": false,
+    "quality": false,
+    "evidence": "evidence/group-review.md"
+  }
+}

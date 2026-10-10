@@ -1,7 +1,7 @@
 {
   "name": "feishu-kb-product-builder",
-  "version": "2.0.0",
-  "description": "V2：按确定流程逐篇制作三级飞书知识库，复用原图、充分生成客户最新自有视觉小黑配图，并保存证据与验收。",
+  "version": "3.0.0",
+  "description": "V3：按确定流程制作关键位置配图，内容适配场景、丰富表演及细腻光影，原资源保护与真实证据验收。",
   "author": {
     "name": "半目",
     "url": "https://github.com/banmu23"
@@ -16,8 +16,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "飞书知识库产品一键生成",
-    "shortDescription": "把课程资料做成可交付的飞书知识库",
-    "longDescription": "V2：按确定流程逐篇制作三级飞书知识库，复用原图、充分生成客户最新自有视觉小黑配图，并保存证据与验收。",
+    "shortDescription": "按确定流程逐篇制作三级飞书知识库",
+    "longDescription": "V3：按确定流程制作关键位置配图，内容适配场景、丰富表演及细腻光影，原资源保护与真实证据验收。",
     "developerName": "半目",
     "category": "Productivity",
     "capabilities": [
