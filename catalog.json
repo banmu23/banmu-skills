@@ -48,7 +48,7 @@
       "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
       "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-kb-product-builder",
       "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-kb-product-builder/V3/feishu-kb-product-builder.zip",
-      "sha256": "203b7917f8b72db93857055df41c0522cbc12146b5270d9d45dbe85e42b311b5",
+      "sha256": "c5c94ffad5a55034cb0fd549cbb82f57e4054d184807a68a382c16fe26aaf6e7",
       "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
       "releaseNotes": [
         "关键理解点先定解释任务与准确正文锚点，再按内容设计丰富场景、具体表演和高质感光影",
@@ -224,7 +224,7 @@
       "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
       "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/xiaohei-illustrations-banmu-auntie",
       "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/xiaohei-illustrations-banmu-auntie/V2/xiaohei-illustrations-banmu-auntie.zip",
-      "sha256": "e83a43cbd7ce71f136f18019ef2f0d48ac4679477119e54e03bc2694b48b757a",
+      "sha256": "7cbcf2f7274cfd0a7fb590e332e526c6e3f7be80f53374aafe7c83ecfbc15fec",
       "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
       "releaseNotes": [
         "公开逻辑版：不含作者专属形象、外貌配置及参考；客户从自有角色确认、安装魔改到真实试图验收",

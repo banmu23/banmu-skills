@@ -407,6 +407,54 @@
           "b": "M06",
           "label": "通过",
           "kind": "normal"
+        },
+        {
+          "a": "S07",
+          "b": "S02",
+          "label": "工具/参考失败",
+          "kind": "return"
+        },
+        {
+          "a": "S08",
+          "b": "S07",
+          "label": "逐图不合格",
+          "kind": "return"
+        },
+        {
+          "a": "S09",
+          "b": "S03",
+          "label": "关键点遗漏",
+          "kind": "return"
+        },
+        {
+          "a": "S09",
+          "b": "S05",
+          "label": "场景表演需修",
+          "kind": "return"
+        },
+        {
+          "a": "S11",
+          "b": "S10",
+          "label": "位置/呈现失败",
+          "kind": "return"
+        },
+        {
+          "a": "M03",
+          "b": "M02",
+          "label": "包或实现不合格",
+          "kind": "return"
+        },
+        {
+          "a": "M04",
+          "b": "M03",
+          "label": "安装核对失败",
+          "kind": "return"
+        },
+        {
+          "a": "M06",
+          "b": "M05",
+          "label": "远端/下载不符",
+          "kind": "return"
         }
       ]
     }

@@ -9,7 +9,7 @@
   "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
   "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/xiaohei-illustrations-banmu-auntie",
   "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/xiaohei-illustrations-banmu-auntie/V2/xiaohei-illustrations-banmu-auntie.zip",
-  "sha256": "e83a43cbd7ce71f136f18019ef2f0d48ac4679477119e54e03bc2694b48b757a",
+  "sha256": "7cbcf2f7274cfd0a7fb590e332e526c6e3f7be80f53374aafe7c83ecfbc15fec",
   "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
   "releaseNotes": [
     "公开逻辑版：不含作者专属形象、外貌配置及参考；客户从自有角色确认、安装魔改到真实试图验收",
