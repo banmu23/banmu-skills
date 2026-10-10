@@ -1,0 +1,38 @@
+{
+  "name": "ai-companion-welcome-poster",
+  "displayName": "AI同行者欢迎海报",
+  "version": "1.0.0",
+  "displayVersion": "V1",
+  "versionSequence": 1,
+  "releasedAt": "2026-10-10",
+  "marketplace": "banmu-skills",
+  "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+  "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/ai-companion-welcome-poster",
+  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/ai-companion-welcome-poster/V1/ai-companion-welcome-poster.zip",
+  "sha256": "0bf4b092d5871ce61aea4ef459b30527b1f98c1f3197bd55e277d61615484043",
+  "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+  "releaseNotes": [
+    "以已确认流程组织资料核对、品牌配置、信息精简、多栏卡片与生图制作。",
+    "两套母版独立复用，长昵称明确分行；每件从原母版定向替换，避免连续改图退化。",
+    "公开逻辑包不含客户资料、头像、私有品牌原图或母版；使用者提供自己的授权素材。",
+    "姓名、编号和文案逐字核对，结合整图与手机预览实际验收，定向修改并保留版本。",
+    "英文ZIP根目录直接包含SKILL.md；客户升级先展示变化再确认。"
+  ],
+  "validation": {
+    "publicSourceFiles": 10,
+    "publicPrivateMarkerScan": true,
+    "zipRootSkill": true,
+    "zipMatchesPublicSource": true,
+    "privateAssetsIncluded": false,
+    "allPlatformsTested": false,
+    "humanImageReviewRequiredForEachRun": true,
+    "workflowNodes": 11,
+    "scriptBehaviorTests": 43,
+    "independentForwardTests": 2,
+    "privateRealImageCases": 2,
+    "imageAttempts": 3,
+    "longNameIssueRepaired": true,
+    "pixelIdenticalGuaranteed": false
+  },
+  "history": []
+}

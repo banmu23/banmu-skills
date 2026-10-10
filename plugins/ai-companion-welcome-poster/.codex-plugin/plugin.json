@@ -1,0 +1,36 @@
+{
+  "name": "ai-companion-welcome-poster",
+  "version": "1.0.0",
+  "description": "依据授权资料与品牌配置制作多栏欢迎海报，包含清晰层级、准确文字、实际预览验收和版本保留。",
+  "author": {
+    "name": "半目",
+    "url": "https://github.com/banmu23"
+  },
+  "homepage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/ai-companion-welcome-poster",
+  "repository": "https://github.com/banmu23/banmu-skills",
+  "keywords": [
+    "banmu",
+    "agent-skill",
+    "ai-companion-welcome-poster",
+    "poster",
+    "design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI同行者欢迎海报",
+    "shortDescription": "将授权资料制作成精致清晰的欢迎海报",
+    "longDescription": "依据授权资料与品牌配置制作多栏欢迎海报，包含清晰层级、准确文字、实际预览验收和版本保留。",
+    "developerName": "半目",
+    "category": "Content & Communication",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/banmu23/banmu-skills/tree/main/plugins/ai-companion-welcome-poster",
+    "defaultPrompt": [
+      "根据这份资料和授权素材制作欢迎海报",
+      "按这次反馈定向修改已有欢迎海报"
+    ],
+    "brandColor": "#B88E58"
+  }
+}

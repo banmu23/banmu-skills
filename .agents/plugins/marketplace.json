@@ -135,6 +135,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Content & Communication"
+    },
+    {
+      "name": "ai-companion-welcome-poster",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ai-companion-welcome-poster"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Content & Communication"
     }
   ]
 }

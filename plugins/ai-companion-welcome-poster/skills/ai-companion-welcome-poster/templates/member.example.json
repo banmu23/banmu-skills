@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "nickname": "示例成员",
+  "name_lines": ["示例成员同学"],
+  "token": "0423",
+  "avatar_path": "./member-avatar.png",
+  "source_text": "以下为虚构测试资料：我是示例成员，从事插画教学，目前生活在苏州。",
+  "roles": [
+    {
+      "text": "插画教学",
+      "evidence": "从事插画教学"
+    }
+  ],
+  "locations": [
+    {
+      "text": "现居苏州",
+      "evidence": "目前生活在苏州"
+    }
+  ],
+  "template_id": "auto"
+}
+
