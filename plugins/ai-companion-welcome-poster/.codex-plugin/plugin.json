@@ -1,7 +1,7 @@
 {
   "name": "ai-companion-welcome-poster",
-  "version": "1.0.0",
-  "description": "依据授权资料与品牌配置制作多栏欢迎海报，包含清晰层级、准确文字、实际预览验收和版本保留。",
+  "version": "2.0.0",
+  "description": "依据授权资料与原始母版，按成员信息和空间适配正文，制作精致欢迎海报并实际查看原图与手机预览。",
   "author": {
     "name": "半目",
     "url": "https://github.com/banmu23"
@@ -18,8 +18,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "AI同行者欢迎海报",
-    "shortDescription": "将授权资料制作成精致清晰的欢迎海报",
-    "longDescription": "依据授权资料与品牌配置制作多栏欢迎海报，包含清晰层级、准确文字、实际预览验收和版本保留。",
+    "shortDescription": "按资料与空间适配成员信息的精致欢迎海报",
+    "longDescription": "依据授权资料与原始母版，按成员信息和空间适配正文，制作精致欢迎海报并实际查看原图与手机预览。",
     "developerName": "半目",
     "category": "Content & Communication",
     "capabilities": [

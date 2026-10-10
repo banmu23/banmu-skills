@@ -99,7 +99,7 @@ def validate_profile(profile: dict, profile_path: Path) -> dict:
     if type(profile.get("schema_version")) is not int or profile.get("schema_version") != 1:
         fail("profile.schema_version 必须为 1")
     if profile.get("default_template", "B") != "B":
-        fail("V1 default_template 只能为 B；长昵称由 auto 选择 A")
+        fail("default_template 只能为 B；长昵称由 auto 选择 A")
     contract = text_list(profile.get("visual_contract"), "visual_contract")
     raw_templates = profile.get("templates")
     if not isinstance(raw_templates, dict) or set(raw_templates) != {"A", "B"}:
@@ -155,7 +155,7 @@ def fact_lines(value, label: str, source: str, minimum: int, maximum: int) -> li
 
 def normalize_member(member: dict, member_path: Path) -> dict:
     allowed = {"schema_version", "nickname", "token", "avatar_path", "source_text",
-               "roles", "locations", "template_id", "name_lines"}
+               "roles", "locations", "personal_lines", "template_id", "name_lines"}
     unknown = set(member) - allowed
     if unknown:
         fail(f"member 有未知字段：{', '.join(sorted(unknown))}")
@@ -181,13 +181,15 @@ def normalize_member(member: dict, member_path: Path) -> dict:
     avatar = image_path(member.get("avatar_path"), member_path.parent, "avatar_path")
     roles = fact_lines(member.get("roles"), "roles", source, 1, 3)
     locations = fact_lines(member.get("locations", []), "locations", source, 0, 2)
+    personal_lines = fact_lines(member.get("personal_lines", []), "personal_lines", source, 0, 3)
     choice = member.get("template_id", "auto")
     if choice not in ("auto", "A", "B"):
         fail("template_id 只能为 auto、A 或 B")
     return {
         "nickname": nickname, "display_name": display_name, "token": token,
         "avatar_path": str(avatar), "source_text": source, "roles": roles,
-        "locations": locations, "template_id": choice, "name_lines": name_lines,
+        "locations": locations, "personal_lines": personal_lines,
+        "template_id": choice, "name_lines": name_lines,
     }
 
 
@@ -211,7 +213,8 @@ def select_template(member: dict, profile: dict) -> tuple[str, str]:
         if name_units > templates[selected]["limits"]["nickname_units"]:
             fail(f"昵称超过所选 {selected} 容量；确认改用可容纳母版或请用户提供短昵称，不缩字")
     limits = templates[selected]["limits"]
-    for field, limit_key in (("roles", "role_units"), ("locations", "location_units")):
+    for field, limit_key in (("roles", "role_units"), ("locations", "location_units"),
+                             ("personal_lines", "location_units")):
         for index, row in enumerate(member[field]):
             if units(row["text"]) > limits[limit_key]:
                 fail(f"{field}[{index}] 超过母版 {selected} 的行容量；请回原文精简，不缩字、不拉扁")
@@ -258,6 +261,24 @@ def layout_name(member: dict, selected: str) -> list[str]:
     return lines
 
 
+def layout_content(member: dict, name_lines: list[str]) -> dict:
+    """Share the existing member-body space; counts do not prove visual fit."""
+    groups = [{"field": field, "lines": [row["text"] for row in member[field]]}
+              for field in ("roles", "locations", "personal_lines") if member[field]]
+    count = sum(len(group["lines"]) for group in groups)
+    maximum = 3 if len(name_lines) == 2 else 5
+    if count > maximum:
+        fail(f"成员正文共 {count} 行，当前姓名布局最多 {maximum} 行；roles/locations/personal_lines 共用容量，请提炼次要信息，不缩字")
+    return {
+        "ordered_groups": groups, "body_line_count": count, "max_body_lines": maximum,
+        "reflow_within_member_body": True,
+        "keep_avatar_barcode_and_font_scale": True,
+        "density_review_required": True,
+        "density_hint": ("正文偏少，先查原文是否还有有用的成长方向/同行期待；没有则调间距留白，不编造"
+                         if count <= 2 else "按主次分组，真实查看是否空散或拥挤；不要把行数通过当成视觉通过"),
+    }
+
+
 def compile_job(profile_path: Path, member_path: Path) -> tuple[dict, str]:
     profile_path = profile_path.resolve()
     member_path = member_path.resolve()
@@ -265,16 +286,19 @@ def compile_job(profile_path: Path, member_path: Path) -> tuple[dict, str]:
     member = normalize_member(load_json(member_path), member_path)
     selected, reason = select_template(member, profile)
     name_lines = layout_name(member, selected)
+    content_layout = layout_content(member, name_lines)
     template = profile["templates"][selected]
     replacements = {
         "nickname": member["display_name"],
         "name_lines": name_lines,
         "roles": [row["text"] for row in member["roles"]],
         "locations": [row["text"] for row in member["locations"]],
+        "personal_lines": [row["text"] for row in member["personal_lines"]],
         "token": member["token"], "token_display": member["token"] + "号",
     }
     rendered = "\n".join([replacements["nickname"], *replacements["roles"],
-                           *replacements["locations"], replacements["token_display"]])
+                           *replacements["locations"], *replacements["personal_lines"],
+                           replacements["token_display"]])
     old_terms = template["old_member_terms"]
     forbidden = [term for term in old_terms if term not in rendered]
     job = {
@@ -289,7 +313,7 @@ def compile_job(profile_path: Path, member_path: Path) -> tuple[dict, str]:
             "avatar": {"path": member["avatar_path"], "sha256": sha256(Path(member["avatar_path"])),
                        "role": "support_avatar_only"},
         },
-        "replacement_text": replacements, "facts": member,
+        "replacement_text": replacements, "facts": member, "content_layout": content_layout,
         "name_layout": {"line_count": len(name_lines), "keep_original_font_size": True,
                         "horizontal_compression": False, "avatar_and_barcode_stay_in_place": True,
                         "reflow_dynamic_text_between_avatar_and_barcode": len(name_lines) == 2},
@@ -301,13 +325,14 @@ def compile_job(profile_path: Path, member_path: Path) -> tuple[dict, str]:
         "generation_policy": {
             "always_use_original_master": True, "chain_editing": False,
             "preserve_avatar_artform": True, "pixel_identical_guaranteed": False,
-            "empty_locations": "清除旧地域文字，保留母版分区与留白，不猜新地区",
+            "empty_locations": "清除旧地域文字，不猜新地区；可在成员正文共享区域排入有原文依据的personal_lines",
         },
         "qa_required": [
             "查看原始母版、原始头像、原生候选图及约390像素宽预览",
             "按 replacement_text 逐字核对昵称、四位令牌、所有资料行",
             "核对 evidence 是否真实支持精简文案；脚本只验证证据片段存在",
             "检查旧成员残留、固定文案、字号/布局/材质漂移与头像身份",
+            "查看成员正文信息密度与分组：空散则回原文补有用内容，拥挤则提炼；原文确实少可自然留白",
             "图像签名检查不证明图片完整可用；需实际打开查看",
         ],
         "privacy": "job.json 和 prompt.txt 含成员资料及本地路径，只留私有任务目录，不进入公开包",
@@ -319,6 +344,7 @@ def compile_job(profile_path: Path, member_path: Path) -> tuple[dict, str]:
             "support_avatar_only": {"path": member["avatar_path"], "sha256": job["input_manifest"]["avatar"]["sha256"]},
         },
         "exact_replacement_text": replacements,
+        "member_body_layout": content_layout,
         "editable_regions": template["regions"],
         "fixed_text_do_not_change": template["fixed_text"],
         "visual_contract": profile["visual_contract"],
@@ -336,12 +362,14 @@ def compile_job(profile_path: Path, member_path: Path) -> tuple[dict, str]:
         "昵称必须与 exact_replacement_text.nickname 完全一致，“同学”恰好附加一次；"
         "严格按 exact_replacement_text.name_lines 的行数和逐行文字排版，不自行合并姓名行；"
         "令牌四个数字逐字保持，尤其保留前导零，按原令牌区域布局展示数字和“号”。\n"
-        "角色行和地区行仅排数组中内容；数组少于旧图时清除旧行，locations 空数组就清除旧地区，"
-        "保持对应区域留白，绝不从旧成员继承。\n"
+        "身份、地区和personal_lines仅排数组中内容；数组少于旧图时清除旧行，locations空数组就清除旧地区。"
+        "personal_lines是有原文依据的成长方向或同行期待，不能当作职业、所在地或已经实现的成绩。"
+        "这三组共用头像与条码之间的正文空间；按member_body_layout分组、调间距，不能因没有地区而硬空出一大片。"
+        "不要添加组名标签；资料确实少则自然留白，绝不继承旧信息或自行凑文案。\n"
         "头像保留原主体、身份、颜色和绘画/照片/动物/符号形式；不得将猫画、插画或符号改成人像。"
-        "按原头像框容纳，保持关键面部和双眼可见，不让手或文字遮挡。\n"
+        "按原头像框容纳，保留原拍摄朝向和本来可见的五官；侧背影不补造正脸或眼睛，不让手或文字遮挡。\n"
         "两行姓名采用母版原来字号，不缩字、不横向压缩；头像与条码保持原位，"
-        "在头像和条码之间重新分配姓名、身份、地域等动态文字的间距与位置。"
+        "在头像和条码之间重新分配姓名、身份、地域、成长与同行期待的间距与位置。"
         "此时 regions 原坐标仅是默认名片的位置提示，不得把两行姓名硬挤回原来一行。"
         "保持母版可读字号，不通过缩小到难读、拉扁或溢出边界来塞字。"
         "使用所选 A 或 B 原有姓名样式，不把另一套母版的布局混入。\n"
