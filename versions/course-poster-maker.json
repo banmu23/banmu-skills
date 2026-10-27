@@ -1,0 +1,50 @@
+{
+  "name": "course-poster-maker",
+  "displayName": "课程海报一键生成",
+  "version": "1.0.0",
+  "displayVersion": "V1",
+  "versionSequence": 1,
+  "releasedAt": "2026-10-27",
+  "marketplace": "banmu-skills",
+  "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
+  "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/course-poster-maker",
+  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/course-poster-maker/V1/course-poster-maker.zip",
+  "sha256": "b32c37890c904cadd2bd2a46cea126f4cb41061ea99700afa9dd62e27c383f36",
+  "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
+  "releaseNotes": [
+    "先流程图后逐节点执行；P01–P12覆盖资料、文案、排版、原生生图、真实验收与接续。",
+    "有大纲两张：非大纲信息全部在首张，第二张主放大纲；无大纲只做一张。",
+    "默认精致手绘3D浮雕黑板粉笔与简单深色胡桃木框，完整文案、清楚字形及双图一致性逐项核验。",
+    "按内容可超9:16，动态核验最强可用原生能力；不固化型号、不冒称4K与任意精确尺寸，不含倒计时/平台封面。"
+  ],
+  "validation": {
+    "workflowCoreNodes": 12,
+    "recordBehaviorChecks": 16,
+    "realNativeImageCalls": 5,
+    "finalTrialImages": 3,
+    "textFixAttempts": 2,
+    "trialImageSizes": [
+      [
+        809,
+        1942
+      ],
+      [
+        809,
+        1942
+      ],
+      [
+        941,
+        1672
+      ]
+    ],
+    "original4KVerified": false,
+    "arbitraryExactSizeVerified": false,
+    "underlyingModelDisclosed": false,
+    "publicPrivateMarkerScan": true,
+    "zipRootSkill": true,
+    "zipMatchesPublicSource": true,
+    "privateAssetsIncluded": false,
+    "allPlatformsTested": false
+  },
+  "history": []
+}

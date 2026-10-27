@@ -23,6 +23,8 @@
 | 飞书一键转 ima 知识库 | `feishu-to-ima-kb` | V1 | [介绍页](https://github.com/banmu23/banmu-skills/tree/main/plugins/feishu-to-ima-kb) | [下载 ZIP](https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/feishu-to-ima-kb/V1/feishu-to-ima-kb.zip) |
 | AI同行者欢迎海报 | `ai-companion-welcome-poster` | V2 | [介绍页](https://github.com/banmu23/banmu-skills/tree/main/plugins/ai-companion-welcome-poster) | [下载 ZIP](https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/ai-companion-welcome-poster/V2/ai-companion-welcome-poster.zip) |
 
+| 课程海报一键生成 | `course-poster-maker` | V1 | [介绍页](https://github.com/banmu23/banmu-skills/tree/main/plugins/course-poster-maker) | [下载 ZIP](https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/course-poster-maker/V1/course-poster-maker.zip) |
+
 ## Codex 市场安装
 
 在支持 Plugins 的 Codex 中添加本仓库作为 marketplace，再从 `/plugins` 选择需要的插件。安装完成后新开一个任务，让 Skill 被重新发现。

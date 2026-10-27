@@ -147,6 +147,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Content & Communication"
+    },
+    {
+      "name": "course-poster-maker",
+      "source": {
+        "source": "local",
+        "path": "./plugins/course-poster-maker"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Content & Communication"
     }
   ]
 }

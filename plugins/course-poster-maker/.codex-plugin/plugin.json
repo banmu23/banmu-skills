@@ -1,0 +1,35 @@
+{
+  "name": "course-poster-maker",
+  "version": "1.0.0",
+  "description": "基于真实课程文案与大纲，用当前可用原生生图制作一张或两张精致课程长海报并逐项验收。",
+  "author": {
+    "name": "半目",
+    "url": "https://github.com/banmu23"
+  },
+  "homepage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/course-poster-maker",
+  "repository": "https://github.com/banmu23/banmu-skills",
+  "keywords": [
+    "agent-skill",
+    "course-poster",
+    "image-generation",
+    "design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "课程海报一键生成",
+    "shortDescription": "有大纲两张、无大纲一张的精致课程长海报",
+    "longDescription": "按详细流程读取真实资料、整理文案与视觉母版，使用当前可用原生生图并逐字及目视验收；尺寸按内容与真实能力选择。",
+    "developerName": "半目",
+    "category": "Content & Communication",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/banmu23/banmu-skills/tree/main/plugins/course-poster-maker",
+    "defaultPrompt": [
+      "根据文案、大纲和参考图制作课程海报",
+      "仅修改这张课程海报的指定内容，其余保持"
+    ],
+    "brandColor": "#326961"
+  }
+}

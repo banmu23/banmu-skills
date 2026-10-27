@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "job_id": "",
+  "has_outline": null,
+  "facts_confirmed": false,
+  "source_files": [],
+  "items": [],
+  "tool": {
+    "native": true,
+    "entry": "",
+    "model_name": "不披露时填unknown",
+    "verified_at": "",
+    "evidence": ""
+  },
+  "canvas": {
+    "requested_ratio": "",
+    "rationale": "",
+    "same_size": true
+  },
+  "nodes": {
+    "P01": {"status": "pending", "evidence": []},
+    "P02": {"status": "pending", "evidence": []},
+    "P03": {"status": "pending", "evidence": []},
+    "P04": {"status": "pending", "evidence": []},
+    "P05": {"status": "pending", "evidence": []},
+    "P06": {"status": "pending", "evidence": []},
+    "P07": {"status": "pending", "evidence": []},
+    "P08": {"status": "pending", "evidence": []},
+    "P09": {"status": "pending", "evidence": []},
+    "P10": {"status": "pending", "evidence": [], "reason": "单图时注明不适用"},
+    "P11": {"status": "pending", "evidence": []},
+    "P12": {"status": "pending", "evidence": []}
+  },
+  "pages": [],
+  "open_issues": [],
+  "next_action": "P01"
+}
