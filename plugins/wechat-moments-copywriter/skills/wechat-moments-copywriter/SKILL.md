@@ -2,12 +2,12 @@
 name: wechat-moments-copywriter
 description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chinese WeChat Moments posts from real materials, images, historical posts, final published copy, product information, customer cases, feedback, launches, tools, workflows, or a knowledge base. Trigger for 朋友圈, 发圈, 朋友圈文案, 朋友圈直发, 客户朋友圈, 知识库朋友圈, 看图发圈, or similar writing requests; do not trigger for screenshot filing, material organization, or platform-rule discussion without a writing goal."
 metadata:
-  version: "3.0.0"
+  version: "4.0.0"
 ---
 
 # 一键生成高质量朋友圈
 
-业务版本：V3。能力、资料源与安装范围分开管理：维护者内部使用读取已授权项目规则；客户使用读取客户自己的资料。内部专属人物、产品、路径和价格不随能力进入通用包。
+业务版本：V4。能力、资料源与安装范围分开管理：维护者内部使用读取已授权项目规则；客户使用读取客户自己的资料。内部专属人物、产品、路径和价格不随能力进入通用包。
 
 ## 流程图先行与接续
 
@@ -268,6 +268,8 @@ metadata:
 用户说“再短一点”时，重新抓真实事件、核心判断和自然 CTA，不要只删句子。
 
 用户说“更像我”时，对照表达指纹调整开头、气口、换行、口语、emoji、判断词和 CTA，不要只加入网络词。
+
+收到其他改稿意见时，先按 `references/revision-feedback.md` 判断反馈类型——事实（不捏造、不堆细节）、钩子（不 AI 味、要落产品）、丝滑（少代词、去对仗）、调性（不俗气、回本人）、证据（要硬核）、措辞（不绝对、不重复）、感情（结尾有温度）——再定位差异局部修改，不因一处反馈重写全文，也不因一处修改引入新的绝对化或重复。
 
 用户给出最终版、已发版或亲自润色版时：
 

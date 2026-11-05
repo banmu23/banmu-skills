@@ -1,6 +1,6 @@
 # 版本与更新
 
-当前业务版本V3，兼容版本3.0.0，以包内VERSION为准。
+当前业务版本V4，兼容版本4.0.0，以包内VERSION为准。
 
 公开版本公告：https://raw.githubusercontent.com/banmu23/banmu-skills/main/versions/wechat-moments-copywriter.json
 

@@ -2,20 +2,17 @@
 
 把真实素材、配图、历史表达与自己的知识库，转成接近可直接发布的朋友圈文案。
 
-- 当前业务版本：V3（市场兼容字段 `3.0.0`）
-- [下载一键安装包](https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-moments-copywriter/V3/wechat-moments-copywriter.zip)
+- 当前业务版本：V4（市场兼容字段 `4.0.0`）
+- [下载一键安装包](https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-moments-copywriter/V4/wechat-moments-copywriter.zip)
 - [查看版本记录](https://github.com/banmu23/banmu-skills/blob/main/versions/wechat-moments-copywriter.json)
-- ZIP SHA-256：`a2b2f8b3786e4b6155c3894de76ee2a16fcbb1876b3d7a0553833b21903e7d06`
+- ZIP SHA-256：`35b701bb0f13254cc7a3357840a537968f6844c9c7e4252e73afdc30e5729004`
 
-## V3 更新
+## V4 更新
 
-- 先定F00—F11业务流程图，再逐节点执行、核验和接续；保留原有写作能力与跨类型语料规则。
-- 先识别发布者目标与关键选择，有证据才写共同调整，保留案例主角主体性，不把个人表达机械改成销售模板。
-- 核对结果归属、人物关系与当前阶段，不把客户成果写成发布者亲历，不把阶段进展升级为全部完成。
-- 按新老用户、产品关系与已确认渠道分流权益，动态价格和交付边界不混写、不补造。
-- 配图先核上下文、日期、文字与版本，优先清晰原图，逐图对应正文证据与发布图序。
-- 终稿对比回流到授权知识库；支持双链时建立真实可达的来源与用途关系，未发布声明优先。
-- 跨平台按实际能力调用；升级先展示变化再确认，不自动发布朋友圈，不宣称全部平台已实测。
+- 新增改稿反馈反模式清单：事实（不捏造不堆细节）、钩子（不AI味要落产品）、丝滑（少代词去对仗）、调性（不俗气回本人）、证据（硬核）、措辞（不绝对不重复）、感情（结尾有温度）。
+- 直发检查新增丝滑度、钩子与结尾、证据链三类关卡，表达指纹补齐模板邀请与代词对仗两种失败模式。
+- 改稿按反馈类型定位差异并局部修改，不因一处意见重写全文，不引入新的绝对化或重复。
+- 案例稿用今昔对比做证据链，同人同事多条朋友圈分工，一条管结果、一条管成长。
 
 ## 怎么使用
 
@@ -33,20 +30,13 @@
 
 ## 本轮验证范围
 
-Skill结构校验、4例独立隔离试跑与原有只读语料脚本回归通过；快照后本机覆盖，13文件维护源/安装/ZIP一致。实际图片视觉回归、其他平台原生实装及客户知识库写入未在本轮执行；不自动发布朋友圈。
+结构校验、只读语料脚本回归通过；14文件维护源/安装/ZIP一致。其他平台原生实装、实际图片视觉回归与客户知识库写入未在本轮执行；不自动发布朋友圈。
 
 本次未宣称所有平台均已真实运行；准备调用提示词不等于目标平台能力已实测。每次运行仍须核对当前素材、权限、动态价格权益与实际成品。
 
 ## 历史版本
 
-- [2.0.0 安装包](https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-moments-copywriter/2.0.0/wechat-moments-copywriter.zip)
+- [V3 安装包](https://raw.githubusercontent.com/{REPO}/main/packages/{NAME}/V3/{NAME}.zip)
+- [2.0.0 安装包](https://raw.githubusercontent.com/{REPO}/main/packages/{NAME}/2.0.0/{NAME}.zip)
 
 @半目 版权所属 / ➕微信 banmu23 / 获取持续更新🧡
-
-## 配套资料
-
-- [详细流程图](skills/wechat-moments-copywriter/references/workflow.md)
-- [使用说明](../../packages/wechat-moments-copywriter/V3/使用说明.md)
-- [客户知识库结构模板](../../packages/wechat-moments-copywriter/V3/客户知识库结构模板.md)
-- [跨平台调用提示词](../../packages/wechat-moments-copywriter/V3/跨平台调用提示词.md)
-- [版本说明](../../packages/wechat-moments-copywriter/V3/版本说明.md)

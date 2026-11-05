@@ -1,26 +1,40 @@
 {
   "name": "wechat-moments-copywriter",
   "displayName": "一键生成高质量朋友圈",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "releasedAt": "2026-11-06",
   "marketplace": "banmu-skills",
   "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
   "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/wechat-moments-copywriter",
-  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-moments-copywriter/V3/wechat-moments-copywriter.zip",
-  "sha256": "a2b2f8b3786e4b6155c3894de76ee2a16fcbb1876b3d7a0553833b21903e7d06",
+  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-moments-copywriter/V4/wechat-moments-copywriter.zip",
+  "sha256": "35b701bb0f13254cc7a3357840a537968f6844c9c7e4252e73afdc30e5729004",
   "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
   "releaseNotes": [
-    "先定F00—F11业务流程图，再逐节点执行、核验和接续；保留原有写作能力与跨类型语料规则。",
-    "先识别发布者目标与关键选择，有证据才写共同调整，保留案例主角主体性，不把个人表达机械改成销售模板。",
-    "核对结果归属、人物关系与当前阶段，不把客户成果写成发布者亲历，不把阶段进展升级为全部完成。",
-    "按新老用户、产品关系与已确认渠道分流权益，动态价格和交付边界不混写、不补造。",
-    "配图先核上下文、日期、文字与版本，优先清晰原图，逐图对应正文证据与发布图序。",
-    "终稿对比回流到授权知识库；支持双链时建立真实可达的来源与用途关系，未发布声明优先。",
-    "跨平台按实际能力调用；升级先展示变化再确认，不自动发布朋友圈，不宣称全部平台已实测。"
+    "新增改稿反馈反模式清单：事实（不捏造不堆细节）、钩子（不AI味要落产品）、丝滑（少代词去对仗）、调性（不俗气回本人）、证据（硬核）、措辞（不绝对不重复）、感情（结尾有温度）。",
+    "直发检查新增丝滑度、钩子与结尾、证据链三类关卡，表达指纹补齐模板邀请与代词对仗两种失败模式。",
+    "改稿按反馈类型定位差异并局部修改，不因一处意见重写全文，不引入新的绝对化或重复。",
+    "案例稿用今昔对比做证据链，同人同事多条朋友圈分工，一条管结果、一条管成长。",
+    "沿用F00—F11流程与原有写作、图文、终稿回流能力；升级先确认，不自动发布。"
   ],
-  "displayVersion": "V3",
-  "versionSequence": 3,
+  "displayVersion": "V4",
+  "versionSequence": 4,
   "history": [
+    {
+      "version": "3.0.0",
+      "releasedAt": "2026-11-06",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-moments-copywriter/V3/wechat-moments-copywriter.zip",
+      "sha256": "a2b2f8b3786e4b6155c3894de76ee2a16fcbb1876b3d7a0553833b21903e7d06",
+      "releaseNotes": [
+        "先定F00—F11业务流程图，再逐节点执行、核验和接续；保留原有写作能力与跨类型语料规则。",
+        "先识别发布者目标与关键选择，有证据才写共同调整，保留案例主角主体性，不把个人表达机械改成销售模板。",
+        "核对结果归属、人物关系与当前阶段，不把客户成果写成发布者亲历，不把阶段进展升级为全部完成。",
+        "按新老用户、产品关系与已确认渠道分流权益，动态价格和交付边界不混写、不补造。",
+        "配图先核上下文、日期、文字与版本，优先清晰原图，逐图对应正文证据与发布图序。",
+        "终稿对比回流到授权知识库；支持双链时建立真实可达的来源与用途关系，未发布声明优先。",
+        "跨平台按实际能力调用；升级先展示变化再确认，不自动发布朋友圈，不宣称全部平台已实测。"
+      ],
+      "displayVersion": "V3"
+    },
     {
       "version": "2.0.0",
       "releasedAt": "2026-09-10",
@@ -37,12 +51,10 @@
   "validation": {
     "status": "validated-with-declared-boundaries",
     "workflowCoreNodes": 12,
-    "sourceFileCount": 13,
+    "sourceFileCount": 14,
     "skillStructureValidation": "passed",
-    "independentForwardScenarios": 4,
-    "independentForwardScenariosPassed": 4,
     "readOnlyCorpusScriptRegression": "passed",
-    "sourceInstallZipFilesVerified": 13,
+    "sourceInstallZipFilesVerified": 14,
     "snapshotBeforeInstall": true,
     "privateCustomerAssetsIncluded": false,
     "allPlatformsTested": false,
