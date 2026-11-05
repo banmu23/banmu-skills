@@ -1,6 +1,6 @@
 interface:
   display_name: "课程海报一键生成"
-  short_description: "原生生图制作精致课程长海报，有大纲两张、无大纲一张，逐项核验文案与视觉质量"
-  default_prompt: "请使用 $course-poster-maker，基于我的课程文案、大纲和视觉参考制作完整课程海报，按内容确定尺寸并实际验收。"
+  short_description: "按客户参考海报、人物与真实素材制作课程长海报，支持单图双图及清晰保真的定向修改"
+  default_prompt: "请使用 $course-poster-maker，读取我的课程文案、参考海报和可选人物素材，按流程先规划版式，再制作并验收课程海报。"
 policy:
   allow_implicit_invocation: true

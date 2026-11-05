@@ -1,50 +1,52 @@
 {
   "name": "course-poster-maker",
   "displayName": "课程海报一键生成",
-  "version": "1.0.0",
-  "displayVersion": "V1",
-  "versionSequence": 1,
-  "releasedAt": "2026-10-27",
+  "version": "2.0.0",
+  "displayVersion": "V2",
+  "versionSequence": 2,
+  "releasedAt": "2026-11-06",
   "marketplace": "banmu-skills",
   "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
   "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/course-poster-maker",
-  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/course-poster-maker/V1/course-poster-maker.zip",
-  "sha256": "b32c37890c904cadd2bd2a46cea126f4cb41061ea99700afa9dd62e27c383f36",
+  "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/course-poster-maker/V2/course-poster-maker.zip",
+  "sha256": "31175289b40bb847a44814c6d618a23f0b1d5bf86bd08d10e16ddde72d234a49",
   "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
   "releaseNotes": [
-    "先流程图后逐节点执行；P01–P12覆盖资料、文案、排版、原生生图、真实验收与接续。",
-    "有大纲两张：非大纲信息全部在首张，第二张主放大纲；无大纲只做一张。",
-    "默认精致手绘3D浮雕黑板粉笔与简单深色胡桃木框，完整文案、清楚字形及双图一致性逐项核验。",
-    "按内容可超9:16，动态核验最强可用原生能力；不固化型号、不冒称4K与任意精确尺寸，不含倒计时/平台封面。"
+    "客户可上传参考海报、照片、简介、Logo、案例与新增板块，按角色读取并拆解设计。",
+    "单张整合／主海报加大纲海报由客户选择并沿用；不展示大纲不补造目录，取消固定黑板模板。",
+    "全局网格、标题与副标题成组、同级字号段距、自然转场、品牌中英和价格组统一验收。",
+    "真实证据原图优先、像素马赛克、完整上下文与一体叠拼；源保真和最终阅读分别核验。",
+    "冻结已认可区域，定向修改回源防损质；支持可信原生素材复用，新增调用为0如实记录。",
+    "按现场能力核原生／插件；获授权后可用HTML／混合并交可编辑源，不宣称全部平台实测。"
   ],
   "validation": {
     "workflowCoreNodes": 12,
-    "recordBehaviorChecks": 16,
-    "realNativeImageCalls": 5,
-    "finalTrialImages": 3,
-    "textFixAttempts": 2,
-    "trialImageSizes": [
-      [
-        809,
-        1942
-      ],
-      [
-        809,
-        1942
-      ],
-      [
-        941,
-        1672
-      ]
-    ],
-    "original4KVerified": false,
-    "arbitraryExactSizeVerified": false,
+    "schemaVersion": 2,
+    "recordAndPixelBehaviorChecks": 79,
+    "existingRealPosterRegression": true,
+    "realPixelFreezeRegression": true,
+    "forwardPlanningScenarios": 3,
+    "newNativeImageCallsThisRelease": 0,
+    "newPortraitRenderTested": false,
+    "htmlRenderTestedThisRelease": false,
+    "allPlatformsTested": false,
     "underlyingModelDisclosed": false,
     "publicPrivateMarkerScan": true,
     "zipRootSkill": true,
     "zipMatchesPublicSource": true,
     "privateAssetsIncluded": false,
-    "allPlatformsTested": false
+    "original4KVerified": false,
+    "arbitraryExactSizeVerified": false
   },
-  "history": []
+  "history": [
+    {
+      "version": "1.0.0",
+      "displayVersion": "V1",
+      "releasedAt": "2026-10-27",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/course-poster-maker/V1/course-poster-maker.zip",
+      "sha256": "b32c37890c904cadd2bd2a46cea126f4cb41061ea99700afa9dd62e27c383f36",
+      "sourceCommit": "d207bb5565bc1cfc30403d0d1ddb22cb20f8a648",
+      "sourceUrl": "https://github.com/banmu23/banmu-skills/tree/d207bb5565bc1cfc30403d0d1ddb22cb20f8a648/plugins/course-poster-maker/skills/course-poster-maker"
+    }
+  ]
 }

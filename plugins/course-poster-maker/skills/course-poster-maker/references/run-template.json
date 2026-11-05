@@ -1,14 +1,28 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "job_id": "",
+  "poster_mode": null,
   "has_outline": null,
+  "outline_display_mode": null,
   "facts_confirmed": false,
+  "edit_mode": false,
+  "baseline": null,
   "source_files": [],
+  "asset_roles": [],
   "items": [],
+  "design_plan": {
+    "file": "",
+    "confirmed": false
+  },
+  "render_route": {
+    "kind": "native",
+    "authorized": false,
+    "evidence": ""
+  },
   "tool": {
     "native": true,
     "entry": "",
-    "model_name": "不披露时填unknown",
+    "model_name": "unknown",
     "verified_at": "",
     "evidence": ""
   },
@@ -17,21 +31,86 @@
     "rationale": "",
     "same_size": true
   },
+  "conditional_reviews": {
+    "reference": {
+      "status": "not_applicable",
+      "evidence": [],
+      "reason": "尚未使用参考图"
+    },
+    "portrait": {
+      "status": "not_applicable",
+      "evidence": [],
+      "reason": "尚未使用人物照片"
+    },
+    "evidence": {
+      "status": "not_applicable",
+      "evidence": [],
+      "reason": "尚未使用案例证据"
+    },
+    "revision": {
+      "status": "not_applicable",
+      "evidence": [],
+      "reason": "当前不是修改已有海报"
+    }
+  },
   "nodes": {
-    "P01": {"status": "pending", "evidence": []},
-    "P02": {"status": "pending", "evidence": []},
-    "P03": {"status": "pending", "evidence": []},
-    "P04": {"status": "pending", "evidence": []},
-    "P05": {"status": "pending", "evidence": []},
-    "P06": {"status": "pending", "evidence": []},
-    "P07": {"status": "pending", "evidence": []},
-    "P08": {"status": "pending", "evidence": []},
-    "P09": {"status": "pending", "evidence": []},
-    "P10": {"status": "pending", "evidence": [], "reason": "单图时注明不适用"},
-    "P11": {"status": "pending", "evidence": []},
-    "P12": {"status": "pending", "evidence": []}
+    "P01": {
+      "status": "pending",
+      "evidence": []
+    },
+    "P02": {
+      "status": "pending",
+      "evidence": []
+    },
+    "P03": {
+      "status": "pending",
+      "evidence": []
+    },
+    "P04": {
+      "status": "pending",
+      "evidence": []
+    },
+    "P05": {
+      "status": "pending",
+      "evidence": []
+    },
+    "P06": {
+      "status": "pending",
+      "evidence": []
+    },
+    "P07": {
+      "status": "pending",
+      "evidence": []
+    },
+    "P08": {
+      "status": "pending",
+      "evidence": []
+    },
+    "P09": {
+      "status": "pending",
+      "evidence": []
+    },
+    "P10": {
+      "status": "pending",
+      "evidence": []
+    },
+    "P11": {
+      "status": "pending",
+      "evidence": []
+    },
+    "P12": {
+      "status": "pending",
+      "evidence": []
+    }
   },
   "pages": [],
   "open_issues": [],
-  "next_action": "P01"
+  "accepted_limits": [],
+  "acceptance": {
+    "technical_passed": false,
+    "customer_approved_scopes": [],
+    "customer_final_approved": false
+  },
+  "next_action": "P01",
+  "requested_roles": []
 }
