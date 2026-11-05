@@ -1,7 +1,7 @@
 {
   "name": "wechat-moments-copywriter",
-  "version": "2.0.0",
-  "description": "基于真实素材、案例、产品资料和历史终稿生成可直接发布的朋友圈文案。",
+  "version": "3.0.0",
+  "description": "基于真实素材、配图、产品资料和历史终稿，按完整流程核验证据、识别共同动作并生成朋友圈文案。",
   "author": {
     "name": "半目",
     "url": "https://github.com/banmu23"
@@ -15,9 +15,9 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "高质量朋友圈一键生成",
+    "displayName": "一键生成高质量朋友圈",
     "shortDescription": "生成自然、真实、可直发的朋友圈",
-    "longDescription": "基于真实素材、案例、产品资料和历史终稿生成可直接发布的朋友圈文案。",
+    "longDescription": "基于真实素材、配图、产品资料和历史终稿，按完整流程核验证据、识别共同动作并生成朋友圈文案。",
     "developerName": "半目",
     "category": "Content & Communication",
     "capabilities": [

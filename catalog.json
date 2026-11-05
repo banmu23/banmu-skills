@@ -151,20 +151,57 @@
     },
     {
       "name": "wechat-moments-copywriter",
-      "displayName": "高质量朋友圈一键生成",
-      "version": "2.0.0",
-      "releasedAt": "2026-09-10",
+      "displayName": "一键生成高质量朋友圈",
+      "version": "3.0.0",
+      "releasedAt": "2026-11-06",
       "marketplace": "banmu-skills",
       "marketplaceRepository": "https://github.com/banmu23/banmu-skills",
       "skillPage": "https://github.com/banmu23/banmu-skills/tree/main/plugins/wechat-moments-copywriter",
-      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-moments-copywriter/2.0.0/wechat-moments-copywriter.zip",
-      "sha256": "5faec38a758fe9af079e1ad95f66e8ad3ea9221d0d04f66706a29f25353d11bc",
+      "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-moments-copywriter/V3/wechat-moments-copywriter.zip",
+      "sha256": "a2b2f8b3786e4b6155c3894de76ee2a16fcbb1876b3d7a0553833b21903e7d06",
       "upgradePolicy": "check-on-first-use-and-confirm-before-replace",
       "releaseNotes": [
-        "同步维护源当前最新版",
-        "生成客户安全版一键上传包",
-        "加入首次使用版本检查与确认更新机制"
-      ]
+        "先定F00—F11业务流程图，再逐节点执行、核验和接续；保留原有写作能力与跨类型语料规则。",
+        "先识别发布者目标与关键选择，有证据才写共同调整，保留案例主角主体性，不把个人表达机械改成销售模板。",
+        "核对结果归属、人物关系与当前阶段，不把客户成果写成发布者亲历，不把阶段进展升级为全部完成。",
+        "按新老用户、产品关系与已确认渠道分流权益，动态价格和交付边界不混写、不补造。",
+        "配图先核上下文、日期、文字与版本，优先清晰原图，逐图对应正文证据与发布图序。",
+        "终稿对比回流到授权知识库；支持双链时建立真实可达的来源与用途关系，未发布声明优先。",
+        "跨平台按实际能力调用；升级先展示变化再确认，不自动发布朋友圈，不宣称全部平台已实测。"
+      ],
+      "displayVersion": "V3",
+      "versionSequence": 3,
+      "history": [
+        {
+          "version": "2.0.0",
+          "releasedAt": "2026-09-10",
+          "downloadUrl": "https://raw.githubusercontent.com/banmu23/banmu-skills/main/packages/wechat-moments-copywriter/2.0.0/wechat-moments-copywriter.zip",
+          "sha256": "5faec38a758fe9af079e1ad95f66e8ad3ea9221d0d04f66706a29f25353d11bc",
+          "releaseNotes": [
+            "同步维护源当前最新版",
+            "生成客户安全版一键上传包",
+            "加入首次使用版本检查与确认更新机制"
+          ],
+          "displayVersion": "V2 (legacy directory 2.0.0)"
+        }
+      ],
+      "validation": {
+        "status": "validated-with-declared-boundaries",
+        "workflowCoreNodes": 12,
+        "sourceFileCount": 13,
+        "skillStructureValidation": "passed",
+        "independentForwardScenarios": 4,
+        "independentForwardScenariosPassed": 4,
+        "readOnlyCorpusScriptRegression": "passed",
+        "sourceInstallZipFilesVerified": 13,
+        "snapshotBeforeInstall": true,
+        "privateCustomerAssetsIncluded": false,
+        "allPlatformsTested": false,
+        "nativeUiReloadTested": false,
+        "actualImageVisualRegressionThisRelease": false,
+        "customerKnowledgeBaseWriteTested": false,
+        "automaticMomentsPublish": false
+      }
     },
     {
       "name": "banmu-deep-consultation-planner",

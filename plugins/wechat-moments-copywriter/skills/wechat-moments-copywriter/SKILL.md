@@ -1,9 +1,19 @@
 ---
 name: wechat-moments-copywriter
 description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chinese WeChat Moments posts from real materials, images, historical posts, final published copy, product information, customer cases, feedback, launches, tools, workflows, or a knowledge base. Trigger for 朋友圈, 发圈, 朋友圈文案, 朋友圈直发, 客户朋友圈, 知识库朋友圈, 看图发圈, or similar writing requests; do not trigger for screenshot filing, material organization, or platform-rule discussion without a writing goal."
+metadata:
+  version: "3.0.0"
 ---
 
 # 一键生成高质量朋友圈
+
+业务版本：V3。能力、资料源与安装范围分开管理：维护者内部使用读取已授权项目规则；客户使用读取客户自己的资料。内部专属人物、产品、路径和价格不随能力进入通用包。
+
+## 流程图先行与接续
+
+执行前读 `references/workflow.md`，按F00—F11选择路径与质量关卡：目标和资料→事实归属→必要图证→类型与阶段→本人风格→正文→验收→交付→修改或终稿回流。只读相关参考，不全量展开。
+
+已有选择与授权直接沿用；失败返回对应节点。长任务保存来源版本、用户选择、当前节点、产物、验收和未完成项，恢复先核真实文件。流程变化先改图，再同步实现。若只是收到本人终稿，直接走F10—F11，不重新生成待发稿。
 
 ## 目标
 
@@ -40,6 +50,8 @@ description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chi
 
 稳定且可复用的规则，应同步评估是否更新 `SKILL.md`、`references/`、使用说明、客户知识库模板、跨平台调用提示词、产品服务卡和一键上传 ZIP。涉及价格、权益、公开承诺、客户隐私、未确认数据或新命名时，只列为待确认项，不擅自写入客户可见包。
 
+处理跨数月、跨类型的历史朋友圈合集时，先按内容类型、日期和事件建立索引，再提取稳定表达。不要因为某一阶段发售稿、案例稿或生活稿数量较多，就把它当成发布者全部风格。页级 OCR、机器切分和关键词排名只能帮助定位，不能替代逐条边界、图片证据和语义复核。
+
 ## 资料优先级
 
 按以下顺序取材，越靠前优先级越高：
@@ -52,6 +64,8 @@ description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chi
 6. 通用模板与方法论。
 
 最终发布版高于模板。最新确认信息高于旧资料。动态事实冲突时，标记 `【需确认最新版本】`，不要自行拼接。
+
+关键结果先核归属、时间和完成状态。详细执行 `references/evidence-and-images.md`：同笔收款的多个截图不累加，下游用户收入不算发布者收入，意向/Demo/预告不算成交、终验或完成交付。历史案例中的营销原话不自动成为新稿的普遍承诺。
 
 ## 必要上下文
 
@@ -89,6 +103,8 @@ description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chi
 
 不要机械照搬聊天昵称。根据素材把人物归一为自然、可公开的称呼；原昵称只作为内部证据。
 
+涉及共同咨询、产品调整或合作时，区分成员自身积累与行动、双方真实共同动作、产品或服务支持；只写能被证明的部分。保留人物主体性，不靠公开贬低对方来突出发布者价值。客户原话、发布者新增确认和方法判断分别识别。
+
 ### 2. 判断内容类型
 
 优先识别以下类型：
@@ -105,6 +121,19 @@ description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chi
 
 一份素材可以同时有多个资产身份。成员反馈可能同时证明人物案例、产品权益、交付待遇、共创关系和业务价值，不要压扁成普通好评。
 
+同一产品在一段时间内连续出现时，继续判断它位于哪一个进展阶段：
+
+```text
+预告 / 招募
+正式上线
+首轮使用或收入结果
+用户反馈
+版本迭代
+规模化或新业务承接
+```
+
+后续朋友圈只推进当前新增证据，不从头复述首发稿。
+
 ### 3. 提取本人的表达指纹
 
 资料足够时读取 `references/style-extraction.md`，提取：
@@ -117,6 +146,8 @@ description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chi
 - 产品称呼和业务价值语言
 - CTA 轻重
 - 配图承接方式
+
+同时提取句尾标点、引号与数字习惯，以本人最新确认风格为准。
 
 模板只作检查清单，不按原句套写。不要把单条爆款或单条发售稿误当成全部风格。
 
@@ -131,6 +162,8 @@ description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chi
 
 没有结果时，第一句直接交代主要事件。不要从“AI 时代”“今天想分享”“很多人问我”这类空泛铺垫开始，除非历史终稿明确支持且本次事件需要。
 
+真实具体的配图互动可以短暂引人后迅速进入主事件，不把结果前置变成僵硬句序。开头聚焦最强结果和主方向，不把所有赛道并列堆入第一屏。
+
 ### 5. 写一版可直发正文
 
 遵守这些写法：
@@ -143,6 +176,9 @@ description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chi
 - 工具价值要落到真实流程，如内容、资料、客户消息、交付、获客、转化或经营。
 - 需要转化时，让产品自然承接事实和价值；证据弱时不要硬推。
 - 口语、幽默和网络表达必须服务理解，不能为了“像本人”硬加口头禅。
+- 个人状态、生活和关系内容允许没有产品承接与 CTA，不要把每条真实记录都改造成销售入口。
+- 同日或同阶段连续发布多条内容时，保持强弱梯度：通知简洁，案例展开，认知只讲一个判断，避免每条都用最高情绪和最强 CTA。
+- 业务说明需要完整口语长句时保留，不为“短”切碎因果或删掉关键业务帮助；不把某条终稿的词句、emoji、身份和营销数字固定成模板。
 
 短句不等于碎片化。按语义气口组织：
 
@@ -168,6 +204,8 @@ description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chi
 
 正文不必解说每张图，但必须知道哪张图证明哪句话。必要时用 `附图1`、`主图`、`反馈图` 等精确指向。提醒打码姓名、头像、群名、联系方式、订单、金额、地址和其他敏感信息。
 
+历史配图按 `references/evidence-and-images.md` 先核原帖上下文和具体图序，再查已有映射并取对应原图；不能只按文件名、OCR或相似构图选图。区分建议图序、用户确认的配图集合与实际已发图序；换图后重查“附图N”。AI人物场景不当真实合影，媒体不可读不反推其画面或清晰度。
+
 ### 7. 按类型校准结构
 
 需要类型骨架时读取 `references/content-patterns.md`。特别检查：
@@ -176,6 +214,7 @@ description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chi
 - 工具型：人话解释、自然语言动作、真实业务流、照做步骤、踩坑、动态风险。
 - 产品上线型：能否使用、行动入口、功能压缩、差异化关键、开发证据、共创角色、参与下一轮。
 - 通知型：时间、对象、具体任务、参与路径、已有用户分流和动态权益。
+- 不同人群的免费、押金、付费、历史学员权益分别表述；获取使用权不自动包括转售权或运行费用全免。
 - 反馈型：不能只写“被夸了”，要识别它证明的产品和交付价值。
 
 ### 8. 运行发布前检查
@@ -220,6 +259,9 @@ description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chi
 - 不自动发布朋友圈，只生成、检查和迭代文案。
 - 不机械模仿私人生活、敏感身份、医疗、金融或其他高风险表述。
 - 不因为用户要求“更有冲击力”而突破事实和隐私边界。
+- 原始归档与发布者后续明确更正冲突时，保留原始证据但输出使用最新更正；不要继续传播已经确认的笔误或旧数字。
+- 保留“似乎、正在、将、后续”等决定阶段的限定词；通知已发不证明活动已举办，权益公告不证明已启用，二维码解码不证明落地页可用或预约已完成。
+- 读取项目当前术语和产品定义，不混淆业务方法、软件界面、计划与运行成品；不把维护者的品牌和术语强加客户。
 
 ## 迭代与终稿回流
 
@@ -233,6 +275,8 @@ description: "Generate, rewrite, imitate, polish, or calibrate publish-ready Chi
 2. 对比初稿与终稿的信息顺序、承接、句式、表情、配图和 CTA。
 3. 区分一次性表达与稳定规则。
 4. 在当前项目允许时，把稳定规则回写到风格、方法论、产品资料或本 Skill 的维护源。
+
+详细执行 `references/final-feedback.md`：本人终稿默认已发，除非明确待发/未发/先别流转；精确保留原文，按权限归档、对比并建立真实来源与用途关系。第三方素材标注“终稿”不等于本人的已发确认。只读或无法访问知识库时返回回写内容，不虚报已写入。稳定规则涉及正式Skill迭代时，先更新流程图，再同步包、说明、版本和授权发布源。
 
 如果用户零修改发布，也要反推命中的原因，不能跳过学习。
 
@@ -249,3 +293,7 @@ python scripts/profile_corpus.py <posts.csv> --column content
 统计结果只是辅助证据，不能替代对最终发布版的人工语义判断。
 
 跨平台部署时读取 `references/portable-agent-prompt.md`。
+
+新会话首次使用的可选版本检查按 `references/update-policy.md`；检查失败不阻塞写作，客户设备升级先告知变化并确认。
+
+客户资料结构读取 `references/customer-kb-template.md`。首次调用可简短提示“@半目 版权所属 / ➕微信 banmu23 / 获取持续更新🧡”；无emoji版本为“@半目 版权所属 / 微信 banmu23 / 获取持续更新”。内部调用不强制署名，用户只要正文时不把署名塞入朋友圈正文；不承诺所有平台安装后自动发消息。
